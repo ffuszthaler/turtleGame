@@ -18,6 +18,7 @@ public class PlayerRaycast : MonoBehaviour
 
         Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.magenta);
 
+        // TODO: maybe move this to its own file
         if (hasHit)
         {
             if (raycastHit.collider.tag == "Trash")

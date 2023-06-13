@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class TrashScoreUI : MonoBehaviour
+public class TrashScore : MonoBehaviour
 {
     public TMP_Text trashScore;
 
@@ -15,9 +15,8 @@ public class TrashScoreUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // trashScore.text = "Trash Score: " + GameStats.Instance.trashScore.ToString();
+        trashScore.text = "Trash Score: " + GameStats.Instance.trashScore.ToString();
         // Debug.Log(trashScore.text);
-        // text is the asssssss
-        Debug.Log(GameStats.Instance.trashScore);
+        // Debug.Log(GameStats.Instance.trashScore);
     }
 }

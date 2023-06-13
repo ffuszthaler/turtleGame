@@ -4,5 +4,22 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MenuScreens/GameWin.unity
+    guid: eadbc8776af07c045810aac4c311989c
+  - enabled: 1
+    path: Assets/Scenes/MenuScreens/GameOver.unity
+    guid: 0a793c9d13187a84e840b6320defd580
+  - enabled: 1
+    path: Assets/Scenes/Level01.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/MenuScreens/MainMenu.unity
+    guid: c0521cc6da80715498d26064e9cb6c47
+  - enabled: 1
+    path: Assets/Scenes/Level02.unity
+    guid: c51bce5db6734934eb08a7fac3d26e7a
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 1874fd1155714964bbc53629ed0b1c10, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: a5596f18d9529a349b10f94dcfe2a2de, type: 2}
