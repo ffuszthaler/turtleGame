@@ -10,10 +10,14 @@ public class CameraMovement : MonoBehaviour
     private float _rotationX;
     private float _rotationY;
 
+    private bool _cameraMovementReady = false;
+
     public float mouseSensitivity;
 
     void OnLook(InputValue input)
     {
+        if (!_cameraMovementReady) return;
+
         Vector2 inputVector = input.Get<Vector2>();
         // good idea?
         // inputVector.Normalize();
@@ -36,11 +40,19 @@ public class CameraMovement : MonoBehaviour
         playerTransform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
 
+    // wait for 0.5 sec after starting the game for the camera movement to work
+    private IEnumerator EnableCameraMovement()
+    {
+        yield return new WaitForSeconds(0.5f);
+        _cameraMovementReady = true;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         // lock cursor inside window
         Cursor.lockState = CursorLockMode.Locked;
+        StartCoroutine(EnableCameraMovement());
     }
 
     // Update is called once per frame

@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class RandomizeStart : MonoBehaviour
 {
-    private float _radius = 5f;
+    // make this smaller to limit spawn area of new turtles/seeker
+    private readonly float _radius = 5f;
 
     public GameObject target;
-    public GameObject turtle;
+    public GameObject turtlePrefab;
+    public GameObject newTurtleInstance;
 
-    private GameObject newTurtle;
-
-    public void randomizePositionAfterTurtle()
+    private void RandomizePositionAfterTurtle()
     {
-        // why??? 1 not 0
-        if (GameObject.FindGameObjectsWithTag("Turtle").Length == 1)
+        if (GameObject.FindGameObjectsWithTag("Turtle").Length == 0)
         {
-            Debug.Log("dsfgdfgdfgdg");
-            newTurtle = Instantiate(turtle, transform.position, transform.rotation);
+            newTurtleInstance = Instantiate(turtlePrefab, transform.position, transform.rotation);
         }
 
         Debug.Log("same");
@@ -26,7 +24,15 @@ public class RandomizeStart : MonoBehaviour
         randomSpawnPoint.y = 0.5f;
 
         transform.position = randomSpawnPoint;
-        newTurtle.transform.position = randomSpawnPoint;
+        newTurtleInstance.transform.position = randomSpawnPoint;
+    }
+
+    // wait for frame to finish destroying old turtle
+    IEnumerator InstantiateTurtle()
+    {
+        yield return new WaitForEndOfFrame();
+        // Debug.Log("after destroy: " + GameObject.FindGameObjectsWithTag("Turtle").Length);
+        RandomizePositionAfterTurtle();
     }
 
     // Start is called before the first frame update
@@ -39,16 +45,13 @@ public class RandomizeStart : MonoBehaviour
     {
         Debug.Log(GameObject.FindGameObjectsWithTag("Turtle").Length);
 
-        if (turtle)
+        if (newTurtleInstance.transform.position == target.transform.position)
         {
-            if (turtle.transform.position == target.transform.position)
-            {
-                // maybe add logic to also delete newTurtle after it is being used instead of original turtle
-                Destroy(turtle);
+            // maybe add logic to also delete newTurtleInstance after it is being used instead of original newTurtleInstance
+            Destroy(newTurtleInstance);
 
-                Debug.Log("after destroy: " + GameObject.FindGameObjectsWithTag("Turtle").Length);
-                randomizePositionAfterTurtle();
-            }
+            // Debug.Log("after destroy: " + GameObject.FindGameObjectsWithTag("Turtle").Length);
+            StartCoroutine(InstantiateTurtle());
         }
     }
 }

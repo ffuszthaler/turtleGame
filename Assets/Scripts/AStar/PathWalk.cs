@@ -22,12 +22,17 @@ public class PathWalk : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // get refrence to aStar through tag
+        // required for new turtle instance to find aStar gameobject
+        // uninitialized prefabs cannnot access exiting gameobjects
+        aStar = GameObject.FindWithTag("aStar");
         _grid = aStar.GetComponent<Grid>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Debug.Log("path array index: " + _nextCoordID);
         // move the object forward
         if (_isMoveForward)
         {
