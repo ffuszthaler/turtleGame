@@ -29,6 +29,12 @@ public class TrashPickup : MonoBehaviour
         return randomSpawnPoint;
     }
 
+    private void OnDrawGizmos()
+    {
+        // draw debug sphere to visualize random sphere
+        // Gizmos.DrawWireSphere(transform.position, _radius);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

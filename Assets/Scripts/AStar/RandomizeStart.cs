@@ -1,11 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class RandomizeStart : MonoBehaviour
 {
     // make this smaller to limit spawn area of new turtles/seeker
-    private readonly float _radius = 5f;
+    private readonly float _radius = 2f;
 
     public GameObject target;
     public GameObject turtlePrefab;
@@ -35,6 +37,12 @@ public class RandomizeStart : MonoBehaviour
         RandomizePositionAfterTurtle();
     }
 
+    private void OnDrawGizmos()
+    {
+        // draw debug sphere to visualize random sphere
+        Gizmos.DrawWireSphere(transform.position, _radius);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +51,7 @@ public class RandomizeStart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(GameObject.FindGameObjectsWithTag("Turtle").Length);
+        // Debug.Log(GameObject.FindGameObjectsWithTag("Turtle").Length);
 
         if (newTurtleInstance.transform.position == target.transform.position)
         {
