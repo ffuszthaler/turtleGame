@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+// this probably needs to be renamed
 public class RandomizeStart : MonoBehaviour
 {
     // make this smaller to limit spawn area of new turtles/seeker
-    private readonly float _radius = 2f;
+    private readonly float _radiusX = 5f;
+    private readonly float _radiusZ = 15f;
 
     public GameObject target;
     public GameObject turtlePrefab;
@@ -22,12 +24,17 @@ public class RandomizeStart : MonoBehaviour
 
         Debug.Log("same");
 
-        Vector3 randomSpawnPoint = Random.insideUnitSphere * _radius;
+        Vector3 randomSpawnPoint = Random.insideUnitSphere;
+        randomSpawnPoint =
+            new Vector3(randomSpawnPoint.x * _radiusX, randomSpawnPoint.y, randomSpawnPoint.z * _radiusZ);
         randomSpawnPoint.y = 0.5f;
 
-        transform.position = randomSpawnPoint;
-        newTurtleInstance.transform.position = randomSpawnPoint;
+        // seeker pos
+        // transform.position = randomSpawnPoint;
+
+        // newTurtleInstance.transform.position = randomSpawnPoint;
     }
+
 
     // wait for frame to finish destroying old turtle
     IEnumerator InstantiateTurtle()
@@ -40,7 +47,7 @@ public class RandomizeStart : MonoBehaviour
     private void OnDrawGizmos()
     {
         // draw debug sphere to visualize random sphere
-        Gizmos.DrawWireSphere(transform.position, _radius);
+        // Gizmos.DrawWireSphere(transform.position, _radius);
     }
 
     // Start is called before the first frame update

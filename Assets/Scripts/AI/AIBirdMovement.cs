@@ -25,7 +25,7 @@ public class AIBirdMovement : MonoBehaviour
     {
         turtle = GameObject.FindGameObjectWithTag("Turtle");
 
-        Debug.Log("turtle pos for bird: " + turtle.transform.position + "bird pos: " + navMeshAgent.transform.position);
+        // Debug.Log("turtle pos for bird: " + turtle.transform.position + "bird pos: " + navMeshAgent.transform.position);
 
         navMeshAgent.SetDestination(turtle.transform.position);
     }
