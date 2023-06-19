@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerRaycast : MonoBehaviour
 {
+    public float RayCastDistance;
+
     void OnPickup(InputValue input)
     {
         ShootRay();
@@ -14,7 +16,8 @@ public class PlayerRaycast : MonoBehaviour
     {
         RaycastHit raycastHit;
 
-        bool hasHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out raycastHit);
+        bool hasHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out raycastHit,
+            RayCastDistance);
 
         Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.magenta);
 
@@ -25,6 +28,12 @@ public class PlayerRaycast : MonoBehaviour
             {
                 Destroy(raycastHit.collider.gameObject);
                 GameStats.Instance.IncreaseTrashScore(1);
+            }
+
+            // test logic
+            if (raycastHit.collider.tag == "Turtle")
+            {
+                Destroy(raycastHit.collider.gameObject);
             }
         }
     }

@@ -13,9 +13,9 @@ public class PathWalk : MonoBehaviour
     private Grid _grid;
 
     // variables for ease-in ease-out functions
-    public bool _isMoveForward = true;
-    private int _currentCoordID = 0;
-    private int _nextCoordID = 1;
+    public bool isMoveForward = true;
+    public int currentCoordID = 0;
+    public int nextCoordID = 1;
     private float _rotateSpeed = 3.0f;
     private float _accumulatedTime = 0.0f;
 
@@ -32,15 +32,17 @@ public class PathWalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Debug.Log("path array index: " + _nextCoordID);
+        Debug.Log("path array index: " + nextCoordID);
         // move the object forward
-        if (_isMoveForward)
+        if (isMoveForward)
         {
             WalkForward();
 
-            if (_currentCoordID == _grid.Path.Count - 1)
+            if (currentCoordID == _grid.Path.Count - 1)
             {
-                _isMoveForward = !_isMoveForward;
+                Debug.Log("astar done");
+                // _isMoveForward = !_isMoveForward;
+                // _currentCoordID = 0;
             }
         }
         // move the object backward
@@ -59,26 +61,26 @@ public class PathWalk : MonoBehaviour
     {
         // rotate toward the target 
         transform.forward = Vector3.RotateTowards(transform.forward,
-            _grid.Path[_nextCoordID].WorldPos - transform.position, _rotateSpeed * Time.deltaTime, 0.0f);
+            _grid.Path[nextCoordID].WorldPos - transform.position, _rotateSpeed * Time.deltaTime, 0.0f);
 
         _accumulatedTime += Time.deltaTime;
 
-        transform.position = EaseInOut.MoveTowardSmoothstep(_grid.Path[_currentCoordID].WorldPos,
-            _grid.Path[_nextCoordID].WorldPos, _accumulatedTime);
+        transform.position = EaseInOut.MoveTowardSmoothstep(_grid.Path[currentCoordID].WorldPos,
+            _grid.Path[nextCoordID].WorldPos, _accumulatedTime);
 
         // move to the next edge segment
-        if (transform.position == _grid.Path[_nextCoordID].WorldPos)
+        if (transform.position == _grid.Path[nextCoordID].WorldPos)
         {
-            _currentCoordID++;
+            currentCoordID++;
 
-            if (_currentCoordID <= _grid.Path.Count - 2)
+            if (currentCoordID <= _grid.Path.Count - 2)
             {
-                _nextCoordID = _currentCoordID + 1;
+                nextCoordID = currentCoordID + 1;
                 _accumulatedTime = 0;
             }
             else
             {
-                _nextCoordID = _grid.Path.Count() - 2;
+                nextCoordID = _grid.Path.Count() - 2;
                 _accumulatedTime = 0;
             }
         }
@@ -88,26 +90,26 @@ public class PathWalk : MonoBehaviour
     {
         // rotate toward the target 
         transform.forward = Vector3.RotateTowards(transform.forward,
-            _grid.Path[_nextCoordID].WorldPos - transform.position, _rotateSpeed * Time.deltaTime, 0.0f);
+            _grid.Path[nextCoordID].WorldPos - transform.position, _rotateSpeed * Time.deltaTime, 0.0f);
 
         _accumulatedTime += Time.deltaTime;
 
-        transform.position = EaseInOut.MoveTowardSmoothstep(_grid.Path[_currentCoordID].WorldPos,
-            _grid.Path[_nextCoordID].WorldPos, _accumulatedTime);
+        transform.position = EaseInOut.MoveTowardSmoothstep(_grid.Path[currentCoordID].WorldPos,
+            _grid.Path[nextCoordID].WorldPos, _accumulatedTime);
 
         // move to the next edge segment
-        if (transform.position == _grid.Path[_nextCoordID].WorldPos)
+        if (transform.position == _grid.Path[nextCoordID].WorldPos)
         {
-            _currentCoordID--;
+            currentCoordID--;
 
-            if (_currentCoordID >= 1)
+            if (currentCoordID >= 1)
             {
-                _nextCoordID = _currentCoordID - 1;
+                nextCoordID = currentCoordID - 1;
                 _accumulatedTime = 0;
             }
             else
             {
-                _nextCoordID = 1;
+                nextCoordID = 1;
                 _accumulatedTime = 0;
             }
         }

@@ -563,6 +563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddcb5fd0c4717bf4dbb6977074a8c7d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RayCastDistance: 5
 --- !u!1 &7631660549779355086
 GameObject:
   m_ObjectHideFlags: 0

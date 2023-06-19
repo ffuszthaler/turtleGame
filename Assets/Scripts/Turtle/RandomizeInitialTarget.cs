@@ -11,9 +11,14 @@ public class RandomizeInitialTarget : MonoBehaviour
     public GameObject aStar;
     private Grid _grid;
 
+    private PathWalk _pathWalk;
+
     private Vector3 randomSpawnPoint;
     private readonly float _radiusX = 8f;
     private readonly float _radiusZ = 8f;
+
+    private readonly Vector3 _finalTurtlePosition = new Vector3(-2.5f, 0f, -9f);
+    private bool _hasHitFirstTarget = false;
 
     public void CalculateInitialRandomTargetPosition()
     {
@@ -34,7 +39,12 @@ public class RandomizeInitialTarget : MonoBehaviour
     void Start()
     {
         aStar = GameObject.FindWithTag("aStar");
+        seeker = GameObject.FindWithTag("aStar_Seeker");
+        target = GameObject.FindWithTag("aStar_Target");
+
         _grid = aStar.GetComponent<Grid>();
+
+        _pathWalk = GetComponent<PathWalk>();
 
         CalculateInitialRandomTargetPosition();
     }
@@ -42,12 +52,26 @@ public class RandomizeInitialTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // issue position of turtle and target never quite match after turtle reaches target because of the grid inaccuracy
-        // if (transform.position == target.transform.position)
-        if (transform.position == _grid.Path.Last().WorldPos)
+        if (transform.position == _grid.Path.Last().WorldPos && !_hasHitFirstTarget)
         {
+            _hasHitFirstTarget = true;
+
+            // reposition seeker to last current turtle position before starting 2nd astar
             seeker.transform.position = transform.position;
-            target.transform.position = new Vector3(-2.5f, 0f, 11f);
+
+            // reset next id
+            _pathWalk.currentCoordID = 0;
+            _pathWalk.nextCoordID = 1;
+
+            // reassign target to new/final turtle position
+            target.transform.position = _finalTurtlePosition;
+        }
+
+        // if turtle reaches final target position, stop astar
+        if (_grid.NodeFromWorldPoint(transform.position) == _grid.NodeFromWorldPoint(_finalTurtlePosition))
+        {
+            _pathWalk.isMoveForward = false;
+            Destroy(gameObject);
         }
     }
 }

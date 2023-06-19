@@ -7,6 +7,8 @@ TagManager:
   - Trash
   - Turtle
   - aStar
+  - aStar_Seeker
+  - aStar_Target
   layers:
   - Default
   - TransparentFX
