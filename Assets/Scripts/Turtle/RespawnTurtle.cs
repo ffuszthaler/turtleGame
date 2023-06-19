@@ -21,6 +21,8 @@ public class RespawnTurtle : MonoBehaviour
 
             // instantiate new turtle
             newTurtleInstance = Instantiate(turtlePrefab, transform.position, transform.rotation);
+
+            // randomly spawn multiple ones
         }
     }
 
