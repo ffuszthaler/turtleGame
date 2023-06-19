@@ -43,7 +43,14 @@ public class AIBirdMovement2 : MonoBehaviour
         turtle = GameObject.FindGameObjectWithTag("Turtle");
         GetComponent<NavMeshAgent>().enabled = false;
 
+
         var step = speed * Time.deltaTime;
+    
+        
+        var lookPos = turtle.transform.position - transform.position;
+        Quaternion lookRot = Quaternion.LookRotation(lookPos);
+        lookRot.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, lookRot.eulerAngles.y, transform.rotation.eulerAngles.z);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 5f);
         transform.position = Vector3.MoveTowards(transform.position, turtle.transform.position, step);
     }
 
@@ -54,8 +61,7 @@ public class AIBirdMovement2 : MonoBehaviour
         var step = speed * Time.deltaTime;
         Vector3 target = new Vector3(0, 19.2f, 0);
 
-        // transform.forward = Vector3.RotateTowards(transform.forward,
-        //     target, speed * Time.deltaTime, 0.0f);
+        transform.LookAt(target);
 
         transform.position = Vector3.MoveTowards(transform.position, target, step);
         print(transform.position.y);
@@ -81,7 +87,8 @@ public class AIBirdMovement2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < 0.1f)
+
+        if (transform.position.y < 2f)
         {
             _flyOrAttack = FlyOrAttack.FlyMode;
         }
