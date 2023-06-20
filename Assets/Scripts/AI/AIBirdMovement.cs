@@ -48,34 +48,47 @@ public class AIBirdMovement : MonoBehaviour
 
         var step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, turtle.transform.position, step);
+
+        var lookPos = turtle.transform.position - transform.position;
+
+        Quaternion lookRot = Quaternion.LookRotation(lookPos);
+
+        lookRot.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, lookRot.eulerAngles.y,
+            transform.rotation.eulerAngles.z);
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 5f);
     }
 
     private void FlyUpAgain()
     {
-        print("I am inside Flyupagain");
+        // print("I am inside Flyupagain");
         _flyOrAttack = FlyOrAttack.FlyMode;
         var step = speed * Time.deltaTime;
         Vector3 target = new Vector3(0, 19.2f, 0);
+
+        transform.LookAt(target);
 
         // transform.forward = Vector3.RotateTowards(transform.forward,
         //     target, speed * Time.deltaTime, 0.0f);
 
         transform.position = Vector3.MoveTowards(transform.position, target, step);
-        print(transform.position.y);
+        // print(transform.position.y);
 
         if (transform.position.y == 19.2f)
         {
-            print("should be up again");
+            // print("should be up again");
             _flyOrAttack = FlyOrAttack.AttackMode;
+
             GetComponent<NavMeshAgent>().enabled = true;
-            print("NavMeshAgent enabled");
+            AssignTargetPosition();
+            // print("NavMeshAgent enabled");
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        _flyOrAttack = FlyOrAttack.AttackMode;
+        _flyOrAttack = FlyOrAttack.FlyMode;
         navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponentInChildren<Animator>();
         _animator.SetBool("Attack", false);
@@ -90,13 +103,17 @@ public class AIBirdMovement : MonoBehaviour
         }
 
         timer += Time.deltaTime;
-        print(timer);
+        // print(timer);
 
         if (_flyOrAttack == FlyOrAttack.AttackMode && timer >= 10)
         {
             // AssignTargetPosition();
             _animator.SetBool("Attack", true);
             DiveTowardsTurtle();
+        }
+        else if (_flyOrAttack == FlyOrAttack.AttackMode && timer <= 10 && navMeshAgent.velocity == Vector3.zero)
+        {
+            AssignTargetPosition();
         }
 
         turtle = GameObject.FindGameObjectWithTag("Turtle");
@@ -106,11 +123,10 @@ public class AIBirdMovement : MonoBehaviour
         {
             _animator.SetBool("Attack", false);
             FlyUpAgain();
-            AssignTargetPosition();
             timer = 0f;
         }
 
-        if (GetComponent<NavMeshAgent>().enabled)
+        if (navMeshAgent.enabled)
         {
             transform.position = navMeshAgent.nextPosition;
         }

@@ -130,3 +130,4 @@ MonoBehaviour:
   target: {fileID: 0}
   seeker: {fileID: 0}
   aStar: {fileID: 0}
+  _finalTurtlePosition: {x: -2.5, y: 0, z: -9}

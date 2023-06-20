@@ -90,7 +90,7 @@ public class Grid : MonoBehaviour
                     }
                 }
 
-                Gizmos.DrawCube(node.WorldPos, Vector3.one * (_nodeDiameter - .1f));
+                // Gizmos.DrawCube(node.WorldPos, Vector3.one * (_nodeDiameter - .1f));
             }
         }
     }

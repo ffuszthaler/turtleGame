@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class AStar : MonoBehaviour
 {
-    public Transform seeker;
-    public Transform target;
-    
+    // public Transform seeker;
+    // public Transform target;
+
     private Grid _grid;
+
+    public static AStar Instance;
 
     public void FindPath(Vector3 startPos, Vector3 targetPos)
     {
@@ -96,6 +98,7 @@ public class AStar : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         _grid = GetComponent<Grid>();
     }
 
@@ -107,6 +110,6 @@ public class AStar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FindPath(seeker.position, target.position);
+        // FindPath(seeker.position, target.position);
     }
 }

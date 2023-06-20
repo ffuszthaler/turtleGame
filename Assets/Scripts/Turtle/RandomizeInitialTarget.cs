@@ -14,10 +14,11 @@ public class RandomizeInitialTarget : MonoBehaviour
     private PathWalk _pathWalk;
 
     private Vector3 randomSpawnPoint;
-    private readonly float _radiusX = 8f;
-    private readonly float _radiusZ = 8f;
+    private readonly float _radiusX = 4f;
+    private readonly float _radiusZ = 4f;
 
-    private readonly Vector3 _finalTurtlePosition = new Vector3(-2.5f, 0f, -9f);
+    // [SerializeField] private Vector3 _finalTurtlePosition = new Vector3(-2.5f, 0f, -9f);
+    [SerializeField] private Vector3 _finalTurtlePosition;
     private bool _hasHitFirstTarget = false;
 
     public void CalculateInitialRandomTargetPosition()
@@ -38,9 +39,10 @@ public class RandomizeInitialTarget : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _finalTurtlePosition = target.transform.position;
         aStar = GameObject.FindWithTag("aStar");
-        seeker = GameObject.FindWithTag("aStar_Seeker");
-        target = GameObject.FindWithTag("aStar_Target");
+        // seeker = GameObject.FindWithTag("aStar_Seeker");
+        // target = GameObject.FindWithTag("aStar_Target");
 
         _grid = aStar.GetComponent<Grid>();
 
@@ -52,6 +54,8 @@ public class RandomizeInitialTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        AStar.Instance.FindPath(seeker.transform.position, target.transform.position);
+
         if (transform.position == _grid.Path.Last().WorldPos && !_hasHitFirstTarget)
         {
             _hasHitFirstTarget = true;
