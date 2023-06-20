@@ -5,12 +5,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerRaycast : MonoBehaviour
 {
-    void OnPickup(InputValue input)
-    {
-        ShootRay();
-    }
+    public static PlayerRaycast Instance;
 
-    void ShootRay()
+    // void OnPickup(InputValue input)
+    // {
+    //     ShootRay();
+    // }
+
+    public static RaycastHit ShootRay()
     {
         RaycastHit raycastHit;
 
@@ -21,13 +23,37 @@ public class PlayerRaycast : MonoBehaviour
         // TODO: maybe move this to its own file
         if (hasHit)
         {
-            if (raycastHit.collider.tag == "Trash")
-            {
-                Destroy(raycastHit.collider.gameObject);
-                GameStats.Instance.IncreaseTrashScore(1);
-            }
+            // if (raycastHit.collider.tag == "Trash")
+            // {
+            //     Destroy(raycastHit.collider.gameObject);
+            //     GameStats.Instance.IncreaseTrashScore(1);
+            // }
+            return raycastHit;
+        }
+        else
+        {
+            return raycastHit;
         }
     }
+
+    // public void ShootRay()
+    // {
+    //     RaycastHit raycastHit;
+    //
+    //     bool hasHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out raycastHit);
+    //
+    //     Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.magenta);
+    //
+    //     // TODO: maybe move this to its own file
+    //     if (hasHit)
+    //     {
+    //         if (raycastHit.collider.tag == "Trash")
+    //         {
+    //             Destroy(raycastHit.collider.gameObject);
+    //             GameStats.Instance.IncreaseTrashScore(1);
+    //         }
+    //     }
+    // }
 
     // Start is called before the first frame update
     void Start()

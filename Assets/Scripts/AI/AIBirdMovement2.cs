@@ -24,7 +24,7 @@ public class AIBirdMovement2 : MonoBehaviour
     private Vector3 targetPosition;
 
 
-    private FlyOrAttack _flyOrAttack;
+    public static FlyOrAttack _flyOrAttack;
 
     private void AssignTargetPosition()
     {
@@ -45,7 +45,6 @@ public class AIBirdMovement2 : MonoBehaviour
 
 
         var step = speed * Time.deltaTime;
-    
         
         var lookPos = turtle.transform.position - transform.position;
         Quaternion lookRot = Quaternion.LookRotation(lookPos);
@@ -88,7 +87,7 @@ public class AIBirdMovement2 : MonoBehaviour
     void Update()
     {
 
-        if (transform.position.y < 2f)
+        if (transform.position.y < 1f)
         {
             _flyOrAttack = FlyOrAttack.FlyMode;
         }

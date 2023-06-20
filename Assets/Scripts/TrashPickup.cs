@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TrashPickup : MonoBehaviour
 {
@@ -40,6 +41,8 @@ public class TrashPickup : MonoBehaviour
     {
         transform.position = CalculatePossibleSpawnPoints();
     }
+    
+ 
 
     // Update is called once per frame
     void Update()
