@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ec5db8aee772e0049abc7c9a1c82dabb
+guid: c8d28e61a097b474d806ec4d35810be6
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: c249a056430d30f43937bc2827630761, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WaterBottleMaterial
-    second: {fileID: 2100000, guid: 4b1bcdf8f05cb344eab489b1e372069f, type: 2}
+      name: TinCanMaterial
+    second: {fileID: 2100000, guid: 5d54def4948163b4195b5cc2a1a82605, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

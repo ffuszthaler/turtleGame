@@ -5,14 +5,16 @@ using UnityEngine.InputSystem;
 
 public class PlayerRaycast : MonoBehaviour
 {
-    public float RayCastDistance;
+    public static float RayCastDistance;
+    public static PlayerRaycast Instance;
 
-    void OnPickup(InputValue input)
-    {
-        ShootRay();
-    }
 
-    void ShootRay()
+    // void OnPickup(InputValue input)
+    // {
+    //     ShootRay();
+    // }
+
+    public static RaycastHit ShootRay()
     {
         RaycastHit raycastHit;
 
@@ -24,17 +26,16 @@ public class PlayerRaycast : MonoBehaviour
         // TODO: maybe move this to its own file
         if (hasHit)
         {
-            if (raycastHit.collider.tag == "Trash")
-            {
-                Destroy(raycastHit.collider.gameObject);
-                GameStats.Instance.IncreaseTrashScore(1);
-            }
-
-            // test logic
-            if (raycastHit.collider.tag == "Turtle")
-            {
-                Destroy(raycastHit.collider.gameObject);
-            }
+            // if (raycastHit.collider.tag == "Trash")
+            // {
+            //     Destroy(raycastHit.collider.gameObject);
+            //     GameStats.Instance.IncreaseTrashScore(1);
+            // }
+            return raycastHit;
+        }
+        else
+        {
+            return raycastHit;
         }
     }
 
