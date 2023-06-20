@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using AnimationEaseInOut;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UIElements;
+using Random = UnityEngine.Random;
 
 public enum FlyOrAttack
 {
@@ -13,7 +14,10 @@ public enum FlyOrAttack
 
 public class AIBirdMovement : MonoBehaviour
 {
+    private GameObject[] turtles;
     private GameObject turtle;
+
+    private bool turtleSelected = false;
 
     private NavMeshAgent navMeshAgent;
     [SerializeField] private float radius;
@@ -27,7 +31,7 @@ public class AIBirdMovement : MonoBehaviour
     private Vector3 randomPosition;
     private Vector3 targetPosition;
 
-    private FlyOrAttack _flyOrAttack;
+    public static FlyOrAttack _flyOrAttack;
 
     private void AssignTargetPosition()
     {
@@ -43,7 +47,15 @@ public class AIBirdMovement : MonoBehaviour
 
     private void DiveTowardsTurtle()
     {
-        turtle = GameObject.FindGameObjectWithTag("Turtle");
+        if (!turtleSelected)
+        {
+            turtles = GameObject.FindGameObjectsWithTag("Turtle");
+            var randomIndex = Random.Range(0, turtles.Length);
+            print(randomIndex);
+            turtle = turtles[randomIndex];
+            turtleSelected = true;
+        }
+
         GetComponent<NavMeshAgent>().enabled = false;
 
         var step = speed * Time.deltaTime;
@@ -61,6 +73,8 @@ public class AIBirdMovement : MonoBehaviour
 
     private void FlyUpAgain()
     {
+        turtleSelected = false;
+
         // print("I am inside Flyupagain");
         _flyOrAttack = FlyOrAttack.FlyMode;
         var step = speed * Time.deltaTime;
@@ -115,9 +129,6 @@ public class AIBirdMovement : MonoBehaviour
         {
             AssignTargetPosition();
         }
-
-        turtle = GameObject.FindGameObjectWithTag("Turtle");
-
 
         if (_flyOrAttack == FlyOrAttack.FlyMode)
         {

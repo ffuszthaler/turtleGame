@@ -1,24 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class TrashPickup : MonoBehaviour
+public class TrashSpawnRandomizer : MonoBehaviour
 {
-    //Trash sounds could be implemented here?
-
-    // [field: SerializeField] public float TrashHealth { private set; get; }
-    // public static TrashPickup Instance;
-    //
-    // public void PickUpTrash()
-    // {
-    //     if (TrashHealth == 0f)
-    //     {
-    //         Destroy(gameObject);
-    //     }
-    // }
-
-    // Debug.Log("Enemy Health: " + enemyHealth);
-
     private float _radius = 30f;
 
     private Vector3 CalculatePossibleSpawnPoints()
@@ -40,6 +26,7 @@ public class TrashPickup : MonoBehaviour
     {
         transform.position = CalculatePossibleSpawnPoints();
     }
+
 
     // Update is called once per frame
     void Update()
