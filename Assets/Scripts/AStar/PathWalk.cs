@@ -32,6 +32,9 @@ public class PathWalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_grid.Path == null)
+            return;
+
         Debug.Log("path array index: " + nextCoordID);
         // move the object forward
         if (isMoveForward)
@@ -82,6 +85,7 @@ public class PathWalk : MonoBehaviour
             {
                 nextCoordID = _grid.Path.Count() - 2;
                 _accumulatedTime = 0;
+                currentCoordID--;
             }
         }
     }

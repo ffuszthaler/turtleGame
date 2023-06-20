@@ -31,9 +31,11 @@ public class RandomizeInitialTarget : MonoBehaviour
             randomSpawnPoint.z * _radiusZ + transform.position.z
         );
 
-        randomSpawnPoint = new Vector3(Mathf.Round(randomSpawnPoint.x), Mathf.Round(randomSpawnPoint.y),
+        randomSpawnPoint = new Vector3(Mathf.Round(randomSpawnPoint.x), randomSpawnPoint.y,
             Mathf.Round(randomSpawnPoint.z));
         target.transform.position = randomSpawnPoint;
+
+        // _finalTurtlePosition = randomSpawnPoint;
     }
 
     // Start is called before the first frame update
