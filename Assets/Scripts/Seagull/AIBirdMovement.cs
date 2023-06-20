@@ -2,13 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using AnimationEaseInOut;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 public enum FlyOrAttack
 {
-    FlyMode,
+    PatrolMode,
+    FlyUpMode,
     AttackMode
 };
 
@@ -33,8 +35,62 @@ public class AIBirdMovement : MonoBehaviour
 
     public static FlyOrAttack _flyOrAttack;
 
+    private bool _flyAwayEnabled;
+    private bool _diveDownEnabled;
+    private bool _defaultState;
+
+
+    void StateHandler()
+    {
+        if (_flyAwayEnabled && transform.position.y < 19.2f)
+        {
+            _flyOrAttack = FlyOrAttack.FlyUpMode;
+            _animator.SetBool("Attack", false);
+            timer = 0f;
+        }
+        else if (_diveDownEnabled)
+        {
+            _flyOrAttack = FlyOrAttack.AttackMode;
+            _animator.SetBool("Attack", true);
+        }
+        else if (_defaultState)
+        {
+            _flyOrAttack = FlyOrAttack.PatrolMode;
+            _animator.SetBool("Attack", false);
+        }
+    }
+
+    void BirdMovementController()
+    {
+        if (transform.position.y <= 1f)
+        {
+            _flyAwayEnabled = true;
+            _diveDownEnabled = false;
+        }
+        else if (timer >= 10 && transform.position.y >= 18f)
+        {
+            _diveDownEnabled = true;
+        }
+        else
+        {
+            _defaultState = true;
+            return;
+        }
+    }
+
+    // wenn nicht im Attack Mode ist 
+
     private void AssignTargetPosition()
     {
+        if (_flyAwayEnabled || _diveDownEnabled)
+        {
+            return;
+        }
+        else if (navMeshAgent.velocity != Vector3.zero)
+        {
+            return;
+        }
+
         randomPosition = Random.insideUnitSphere * radius;
         targetPosition = transform.position + randomPosition;
 
@@ -47,6 +103,11 @@ public class AIBirdMovement : MonoBehaviour
 
     private void DiveTowardsTurtle()
     {
+        if (!_diveDownEnabled || _flyAwayEnabled)
+        {
+            return;
+        }
+
         if (!turtleSelected)
         {
             turtles = GameObject.FindGameObjectsWithTag("Turtle");
@@ -73,10 +134,14 @@ public class AIBirdMovement : MonoBehaviour
 
     private void FlyUpAgain()
     {
+        if (!_flyAwayEnabled)
+        {
+            return;
+        }
+
         turtleSelected = false;
 
         // print("I am inside Flyupagain");
-        _flyOrAttack = FlyOrAttack.FlyMode;
         var step = speed * Time.deltaTime;
         Vector3 target = new Vector3(0, 19.2f, 0);
 
@@ -91,51 +156,32 @@ public class AIBirdMovement : MonoBehaviour
         if (transform.position.y == 19.2f)
         {
             // print("should be up again");
-            _flyOrAttack = FlyOrAttack.AttackMode;
 
+            _flyAwayEnabled = false;
             GetComponent<NavMeshAgent>().enabled = true;
-            AssignTargetPosition();
-            // print("NavMeshAgent enabled");
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        _flyOrAttack = FlyOrAttack.FlyMode;
         navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponentInChildren<Animator>();
-        _animator.SetBool("Attack", false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < 0.1f)
-        {
-            _flyOrAttack = FlyOrAttack.FlyMode;
-        }
-
+        print(_flyOrAttack);
+        print(_flyAwayEnabled);
         timer += Time.deltaTime;
-        // print(timer);
+        print(timer);
 
-        if (_flyOrAttack == FlyOrAttack.AttackMode && timer >= 10)
-        {
-            // AssignTargetPosition();
-            _animator.SetBool("Attack", true);
-            DiveTowardsTurtle();
-        }
-        else if (_flyOrAttack == FlyOrAttack.AttackMode && timer <= 10 && navMeshAgent.velocity == Vector3.zero)
-        {
-            AssignTargetPosition();
-        }
-
-        if (_flyOrAttack == FlyOrAttack.FlyMode)
-        {
-            _animator.SetBool("Attack", false);
-            FlyUpAgain();
-            timer = 0f;
-        }
+        StateHandler();
+        BirdMovementController();
+        DiveTowardsTurtle();
+        AssignTargetPosition();
+        FlyUpAgain();
 
         if (navMeshAgent.enabled)
         {
