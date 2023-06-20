@@ -9,6 +9,7 @@ TagManager:
   - aStar
   - aStar_Seeker
   - aStar_Target
+  - Seagull
   layers:
   - Default
   - TransparentFX
