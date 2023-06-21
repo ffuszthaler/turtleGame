@@ -17,9 +17,13 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadSceneAsync("Rules");
     }
 
-
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
     }
 }

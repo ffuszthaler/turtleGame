@@ -221,6 +221,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurtleWrapper (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4063869064028664055, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
 --- !u!1001 &83112205
@@ -913,6 +917,10 @@ PrefabInstance:
     - target: {fileID: 4063869064028664055, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
       propertyPath: m_Name
       value: TurtleWrapper (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063869064028664055, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4063869064079569904, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3676,6 +3684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurtleWrapper (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4063869064028664055, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
 --- !u!4 &1501209611 stripped
@@ -5431,6 +5443,10 @@ PrefabInstance:
     - target: {fileID: 4063869064028664055, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
       propertyPath: m_Name
       value: TurtleWrapper
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063869064028664055, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4063869064079569905, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
       propertyPath: aStar
