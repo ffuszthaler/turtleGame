@@ -17,7 +17,7 @@ public enum FlyOrAttack
 public class AIBirdMovement : MonoBehaviour
 {
     private GameObject[] turtles;
-    private GameObject turtle;
+    public static GameObject turtle;
 
     private bool turtleSelected = false;
 
@@ -35,8 +35,8 @@ public class AIBirdMovement : MonoBehaviour
 
     public static FlyOrAttack _flyOrAttack;
 
-    private bool _flyAwayEnabled;
-    private bool _diveDownEnabled;
+    public static bool _flyAwayEnabled;
+    public static bool _diveDownEnabled;
     private bool _defaultState;
 
 
@@ -62,12 +62,12 @@ public class AIBirdMovement : MonoBehaviour
 
     void BirdMovementController()
     {
-        if (transform.position.y <= 1f)
+        if (transform.position.y <= 1f || _flyAwayEnabled)
         {
             _flyAwayEnabled = true;
             _diveDownEnabled = false;
         }
-        else if (timer >= 10 && transform.position.y >= 18f)
+        else if (timer >= 10 && transform.position.y >= 18f && !_flyAwayEnabled)
         {
             _diveDownEnabled = true;
         }
@@ -180,8 +180,9 @@ public class AIBirdMovement : MonoBehaviour
         StateHandler();
         BirdMovementController();
         DiveTowardsTurtle();
-        AssignTargetPosition();
         FlyUpAgain();
+        AssignTargetPosition();
+
 
         if (navMeshAgent.enabled)
         {
