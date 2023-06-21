@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TurtleStats : MonoBehaviour
 {
@@ -26,5 +27,9 @@ public class TurtleStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if (_turtles.Length == 0)
+        // {
+        //     SceneManager.LoadSceneAsync("GameOver");
+        // }
     }
 }

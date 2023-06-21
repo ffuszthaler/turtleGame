@@ -8,11 +8,14 @@ public class ScreamAtBirds : MonoBehaviour
     private void ScreamAtBird()
     {
         Transform player = transform.parent.GetChild(1);
+
         if (AIBirdMovement.turtle != null)
         {
             float distanceTurtlePlayer =
                 Vector3.Distance(player.position, AIBirdMovement.turtle.transform.position);
+
             print("Distance: " + distanceTurtlePlayer);
+
             if (distanceTurtlePlayer >= 5f)
             {
                 return;
@@ -27,15 +30,10 @@ public class ScreamAtBirds : MonoBehaviour
 
     void OnScream(InputValue input)
     {
-        print("fggfgfgfg");
         RaycastHit raycastHit = PlayerRaycast.ShootRay();
-        print("Raycast" + raycastHit);
-
 
         if (raycastHit.collider.tag == "Seagull")
         {
-            print("Raycast" + raycastHit);
-
             AIBirdMovement._flyAwayEnabled = true;
             ScreamAtBird();
         }
@@ -49,6 +47,5 @@ public class ScreamAtBirds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // ScreamAtBird();
     }
 }

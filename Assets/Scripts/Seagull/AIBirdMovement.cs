@@ -71,15 +71,16 @@ public class AIBirdMovement : MonoBehaviour
             _flyAwayEnabled = true;
             _diveDownEnabled = false;
         }
+
         if (timer >= timerLimit && transform.position.y >= 18f && !_flyAwayEnabled)
         {
             _diveDownEnabled = true;
-            if (turtle != null && hasHitTurtle)
-            {
-                turtle.GetComponent<TurtleStats>().ReduceHealth(1);
-                
-                hasHitTurtle = false;
-            }
+
+            // if (turtle != null)
+            // {
+            //     turtle.GetComponent<TurtleStats>().ReduceHealth(1);
+            //     turtle.GetComponent<TurtleStats>().healthDecreased = false;
+            // }
         }
         else
         {
@@ -122,7 +123,6 @@ public class AIBirdMovement : MonoBehaviour
         {
             turtles = GameObject.FindGameObjectsWithTag("Turtle");
             var randomIndex = Random.Range(0, turtles.Length);
-            // print(randomIndex)
             turtle = turtles[randomIndex];
             turtleSelected = true;
         }
@@ -143,11 +143,6 @@ public class AIBirdMovement : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 5f);
     }
 
-    void OnCollisionEnter()
-    {
-        hasHitTurtle = true;
-    }
-
     private void FlyUpAgain()
     {
         if (!_flyAwayEnabled)
@@ -158,7 +153,6 @@ public class AIBirdMovement : MonoBehaviour
 
         turtleSelected = false;
 
-        // print("I am inside Flyupagain");
         var step = speed * Time.deltaTime;
         Vector3 target = new Vector3(0, 19.2f, 0);
 
@@ -168,16 +162,23 @@ public class AIBirdMovement : MonoBehaviour
         //     target, speed * Time.deltaTime, 0.0f);
 
         transform.position = Vector3.MoveTowards(transform.position, target, step);
-        // print(transform.position.y);
 
         if (transform.position.y == 19.2f)
         {
-            // print("should be up again");
-
             timerLimit = Random.Range(10, 20);
 
             _flyAwayEnabled = false;
             GetComponent<NavMeshAgent>().enabled = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print("trigger");
+
+        if (other.CompareTag("Turtle"))
+        {
+            other.GetComponent<TurtleStats>().ReduceHealth(1);
         }
     }
 
@@ -188,18 +189,12 @@ public class AIBirdMovement : MonoBehaviour
 
         navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponentInChildren<Animator>();
-        hasHitTurtle = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // print(_flyOrAttack);
-        // print(_flyAwayEnabled);
         timer += Time.deltaTime;
-        // print(timer);
-
-        // print(timerLimit);
 
         StateHandler();
         BirdMovementController();
