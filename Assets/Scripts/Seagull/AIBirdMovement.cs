@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using AnimationEaseInOut;
+using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.AI;
@@ -38,7 +39,9 @@ public class AIBirdMovement : MonoBehaviour
 
     public static bool _flyAwayEnabled;
     public static bool _diveDownEnabled;
+
     private bool _defaultState;
+    private bool hasHitTurtle;
 
 
     void StateHandler()
@@ -67,15 +70,16 @@ public class AIBirdMovement : MonoBehaviour
         {
             _flyAwayEnabled = true;
             _diveDownEnabled = false;
-
-            if (turtle != null)
-            {
-                turtle.GetComponent<TurtleStats>().ReduceHealth(1);
-            }
         }
-        else if (timer >= timerLimit && transform.position.y >= 18f && !_flyAwayEnabled)
+        if (timer >= timerLimit && transform.position.y >= 18f && !_flyAwayEnabled)
         {
             _diveDownEnabled = true;
+            if (turtle != null && hasHitTurtle)
+            {
+                turtle.GetComponent<TurtleStats>().ReduceHealth(1);
+                
+                hasHitTurtle = false;
+            }
         }
         else
         {
@@ -123,6 +127,7 @@ public class AIBirdMovement : MonoBehaviour
             turtleSelected = true;
         }
 
+
         GetComponent<NavMeshAgent>().enabled = false;
 
         var step = speed * Time.deltaTime;
@@ -138,12 +143,18 @@ public class AIBirdMovement : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 5f);
     }
 
+    void OnCollisionEnter()
+    {
+        hasHitTurtle = true;
+    }
+
     private void FlyUpAgain()
     {
         if (!_flyAwayEnabled)
         {
             return;
         }
+
 
         turtleSelected = false;
 
@@ -177,6 +188,7 @@ public class AIBirdMovement : MonoBehaviour
 
         navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponentInChildren<Animator>();
+        hasHitTurtle = false;
     }
 
     // Update is called once per frame
