@@ -2797,7 +2797,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1256236165
 MeshRenderer:
@@ -3675,6 +3675,14 @@ PrefabInstance:
     - target: {fileID: 4063869064028664055, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
       propertyPath: m_Name
       value: TurtleWrapper (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063869064079569904, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063869064079569904, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -21.09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798ea506579003d47b394ee36ef8c100, type: 3}

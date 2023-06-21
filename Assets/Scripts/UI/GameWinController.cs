@@ -12,4 +12,9 @@ public class GameWinController : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("MainMenu");
     }
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
 }
