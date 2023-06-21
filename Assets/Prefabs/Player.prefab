@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 94127aa905e18ef47bb13c78f8f3d900, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cec5e83d4aa2754e986736c94d39c8b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 1159966536}
   - component: {fileID: 1159966535}
   m_Layer: 5
-  m_Name: TrashScore
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867759fffe07efc469da7b23907cca42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashScore: {fileID: 1159966536}
+  score: {fileID: 1159966536}
 --- !u!1 &1476856414
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <trashScore>k__BackingField: 0
+  <turtleScore>k__BackingField: 0
 --- !u!1 &7631660548380055728
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +436,7 @@ GameObject:
   - component: {fileID: 7631660549698090589}
   - component: {fileID: 2918915466559637227}
   - component: {fileID: 3416962272403096417}
+  - component: {fileID: 553636994}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -574,6 +576,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd00944f4bc113b4ba41b5aeea593d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &553636994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631660549698090585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1778757e3f8f4dd4fac56dc57eedd777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7631660549779355086

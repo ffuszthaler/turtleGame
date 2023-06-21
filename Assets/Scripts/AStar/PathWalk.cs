@@ -35,7 +35,7 @@ public class PathWalk : MonoBehaviour
         if (_grid.Path == null)
             return;
 
-        Debug.Log("path array index: " + nextCoordID);
+        // Debug.Log("path array index: " + nextCoordID);
         // move the object forward
         if (isMoveForward)
         {

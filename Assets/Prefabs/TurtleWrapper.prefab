@@ -108,7 +108,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4063869062768776032}
   - component: {fileID: 4063869062768776035}
-  - component: {fileID: 4063869062768776034}
   m_Layer: 0
   m_Name: AStar_Seeker
   m_TagString: aStar_Seeker
@@ -124,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4063869062768776037}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.445, y: 0, z: -20.472}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -145,20 +144,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4063869062768776034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4063869062768776037}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 936093c383326d34280ef1b210f9ce27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turtlePrefab: {fileID: 4063869064079569908}
-  newTurtleInstance: {fileID: 4063869064079569908}
 --- !u!1 &4063869064028664055
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4063869064248366188}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.64, y: 0, z: 34.2}
+  m_LocalPosition: {x: -4.23, y: 0, z: 11.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -364,6 +349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turtle
       objectReference: {fileID: 0}
+    - target: {fileID: 4008559086461636051, guid: 0716276a55302a749b0248f37c2a8716, type: 3}
+      propertyPath: m_TagString
+      value: Turtle
+      objectReference: {fileID: 0}
     - target: {fileID: 4008559086461636054, guid: 0716276a55302a749b0248f37c2a8716, type: 3}
       propertyPath: aStar
       value: 
@@ -386,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4008559086461636055, guid: 0716276a55302a749b0248f37c2a8716, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.445
       objectReference: {fileID: 0}
     - target: {fileID: 4008559086461636055, guid: 0716276a55302a749b0248f37c2a8716, type: 3}
       propertyPath: m_LocalPosition.y
@@ -394,7 +383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4008559086461636055, guid: 0716276a55302a749b0248f37c2a8716, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -20.472
       objectReference: {fileID: 0}
     - target: {fileID: 4008559086461636055, guid: 0716276a55302a749b0248f37c2a8716, type: 3}
       propertyPath: m_LocalRotation.w
@@ -436,3 +425,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4008559086461636051, guid: 0716276a55302a749b0248f37c2a8716, type: 3}
   m_PrefabInstance: {fileID: 1136173888776748583}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1612687174573048089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4063869064079569908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd63c512802c8fe4ab990ab3242b7df8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <turtleHealth>k__BackingField: 2

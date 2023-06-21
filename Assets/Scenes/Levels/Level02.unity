@@ -173,14 +173,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 820501487}
     m_Modifications:
-    - target: {fileID: 4063869062768776032, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.121
-      objectReference: {fileID: 0}
-    - target: {fileID: 4063869062768776032, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20.912
-      objectReference: {fileID: 0}
     - target: {fileID: 4063869064028664052, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -228,22 +220,6 @@ PrefabInstance:
     - target: {fileID: 4063869064028664055, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
       propertyPath: m_Name
       value: TurtleWrapper (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4063869064079569904, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.121
-      objectReference: {fileID: 0}
-    - target: {fileID: 4063869064079569904, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20.912
-      objectReference: {fileID: 0}
-    - target: {fileID: 4063869064248366186, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4063869064248366186, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 11.33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
@@ -2804,7 +2780,7 @@ GameObject:
   - component: {fileID: 1256236169}
   m_Layer: 0
   m_Name: DEBUG_seagull
-  m_TagString: Untagged
+  m_TagString: Seagull
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2817,7 +2793,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256236163}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -3635,14 +3611,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 820501487}
     m_Modifications:
-    - target: {fileID: 4063869062768776032, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.445
-      objectReference: {fileID: 0}
-    - target: {fileID: 4063869062768776032, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20.472
-      objectReference: {fileID: 0}
     - target: {fileID: 4063869064028664052, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3691,21 +3659,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurtleWrapper (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4063869064079569904, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.445
-      objectReference: {fileID: 0}
-    - target: {fileID: 4063869064079569904, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20.472
-      objectReference: {fileID: 0}
-    - target: {fileID: 4063869064248366186, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 4063869064248366186, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 11.33
+    - target: {fileID: 4063869064028664055, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
@@ -5415,14 +5371,6 @@ PrefabInstance:
       propertyPath: aStar
       value: 
       objectReference: {fileID: 316814127}
-    - target: {fileID: 4063869062768776032, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.231
-      objectReference: {fileID: 0}
-    - target: {fileID: 4063869062768776032, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20.385
-      objectReference: {fileID: 0}
     - target: {fileID: 4063869064028664052, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5471,21 +5419,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurtleWrapper
       objectReference: {fileID: 0}
-    - target: {fileID: 4063869064079569904, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.231
-      objectReference: {fileID: 0}
-    - target: {fileID: 4063869064079569904, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20.385
-      objectReference: {fileID: 0}
     - target: {fileID: 4063869064079569905, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
       propertyPath: aStar
       value: 
       objectReference: {fileID: 316814127}
-    - target: {fileID: 4063869064248366186, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 11.33
+    - target: {fileID: 4063869064079569908, guid: 798ea506579003d47b394ee36ef8c100, type: 3}
+      propertyPath: m_TagString
+      value: Turtle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798ea506579003d47b394ee36ef8c100, type: 3}

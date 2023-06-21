@@ -78,6 +78,7 @@ public class RandomizeInitialTarget : MonoBehaviour
         {
             _pathWalk.isMoveForward = false;
             Destroy(gameObject);
+            GameStats.Instance.IncreaseTurtleScore(1);
         }
     }
 }

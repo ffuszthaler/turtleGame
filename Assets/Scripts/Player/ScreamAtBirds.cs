@@ -7,17 +7,32 @@ public class ScreamAtBirds : MonoBehaviour
 {
     private void ScreamAtBird()
     {
-        // PlaySound()
-        // AIBirdMovement._flyOrAttack = FlyOrAttack.FlyMode;
+        Transform player = transform.parent.GetChild(1);
+        if (AIBirdMovement.turtle != null)
+        {
+            float distanceTurtlePlayer =
+                Vector3.Distance(player.position, AIBirdMovement.turtle.transform.position);
+            print("Distance: " + distanceTurtlePlayer);
+            if (distanceTurtlePlayer >= 5f)
+            {
+                return;
+            }
+            else
+            {
+                AIBirdMovement._flyAwayEnabled = true;
+                AIBirdMovement._diveDownEnabled = false;
+            }
+        }
     }
 
-    void OnPickup(InputValue input)
+    void OnScream(InputValue input)
     {
+        print("fggfgfgfg");
         RaycastHit raycastHit = PlayerRaycast.ShootRay();
 
         if (raycastHit.collider.tag == "Seagull")
         {
-            Destroy(raycastHit.collider.gameObject);
+            AIBirdMovement._flyAwayEnabled = true;
             ScreamAtBird();
         }
     }
@@ -30,5 +45,6 @@ public class ScreamAtBirds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // ScreamAtBird();
     }
 }
