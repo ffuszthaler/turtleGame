@@ -29,9 +29,13 @@ public class ScreamAtBirds : MonoBehaviour
     {
         print("fggfgfgfg");
         RaycastHit raycastHit = PlayerRaycast.ShootRay();
+        print("Raycast" + raycastHit);
+
 
         if (raycastHit.collider.tag == "Seagull")
         {
+            print("Raycast" + raycastHit);
+
             AIBirdMovement._flyAwayEnabled = true;
             ScreamAtBird();
         }

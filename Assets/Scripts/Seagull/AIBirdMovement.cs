@@ -118,7 +118,7 @@ public class AIBirdMovement : MonoBehaviour
         {
             turtles = GameObject.FindGameObjectsWithTag("Turtle");
             var randomIndex = Random.Range(0, turtles.Length);
-            // print(randomIndex);
+            // print(randomIndex)
             turtle = turtles[randomIndex];
             turtleSelected = true;
         }
@@ -187,7 +187,7 @@ public class AIBirdMovement : MonoBehaviour
         timer += Time.deltaTime;
         // print(timer);
 
-        print(timerLimit);
+        // print(timerLimit);
 
         StateHandler();
         BirdMovementController();
