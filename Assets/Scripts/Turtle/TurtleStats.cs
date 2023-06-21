@@ -15,6 +15,8 @@ public class TurtleStats : MonoBehaviour
         {
             Destroy(transform.parent.gameObject);
         }
+        
+        
 
         Debug.Log("Enemy Health: " + turtleHealth);
     }

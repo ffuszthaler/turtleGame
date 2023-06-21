@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public enum FlyOrAttack
@@ -17,7 +18,7 @@ public enum FlyOrAttack
 
 public class AIBirdMovement : MonoBehaviour
 {
-    private GameObject[] turtles;
+    public static GameObject[] turtles;
     public static GameObject turtle;
 
     private bool turtleSelected = false;
@@ -66,12 +67,6 @@ public class AIBirdMovement : MonoBehaviour
 
     void BirdMovementController()
     {
-        if (transform.position.y <= 1f || _flyAwayEnabled)
-        {
-            _flyAwayEnabled = true;
-            _diveDownEnabled = false;
-        }
-
         if (timer >= timerLimit && transform.position.y >= 18f && !_flyAwayEnabled)
         {
             _diveDownEnabled = true;
@@ -121,26 +116,31 @@ public class AIBirdMovement : MonoBehaviour
 
         if (!turtleSelected)
         {
-            turtles = GameObject.FindGameObjectsWithTag("Turtle");
-            var randomIndex = Random.Range(0, turtles.Length);
-            turtle = turtles[randomIndex];
-            turtleSelected = true;
+            if (turtles.Length != 0)
+            {
+                var randomIndex = Random.Range(0, turtles.Length);
+                turtle = turtles[randomIndex];
+                turtleSelected = true;
+            }
         }
 
 
-        GetComponent<NavMeshAgent>().enabled = false;
+        if (turtle != null)
+        {
+            GetComponent<NavMeshAgent>().enabled = false;
 
-        var step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, turtle.transform.position, step);
+            var step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, turtle.transform.position, step);
 
-        var lookPos = turtle.transform.position - transform.position;
+            var lookPos = turtle.transform.position - transform.position;
 
-        Quaternion lookRot = Quaternion.LookRotation(lookPos);
+            Quaternion lookRot = Quaternion.LookRotation(lookPos);
 
-        lookRot.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, lookRot.eulerAngles.y,
-            transform.rotation.eulerAngles.z);
+            lookRot.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, lookRot.eulerAngles.y,
+                transform.rotation.eulerAngles.z);
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 5f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 5f);
+        }
     }
 
     private void FlyUpAgain()
@@ -176,8 +176,12 @@ public class AIBirdMovement : MonoBehaviour
     {
         print("trigger");
 
+
         if (other.CompareTag("Turtle"))
         {
+            _flyAwayEnabled = true;
+            _diveDownEnabled = false;
+
             other.GetComponent<TurtleStats>().ReduceHealth(1);
         }
     }
@@ -194,6 +198,13 @@ public class AIBirdMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        turtles = GameObject.FindGameObjectsWithTag("Turtle");
+        if (turtles.Length == 0)
+        {
+            print("no more turtles");
+            SceneManager.LoadSceneAsync("GameOver");
+        }
+
         timer += Time.deltaTime;
 
         StateHandler();
