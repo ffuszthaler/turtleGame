@@ -9,6 +9,8 @@ public class RandomizeInitialTarget : MonoBehaviour
     public GameObject seeker;
 
     public GameObject aStar;
+    private PathWalk PathWalkComponent;
+
     private Grid _grid;
 
     private PathWalk _pathWalk;
@@ -43,8 +45,7 @@ public class RandomizeInitialTarget : MonoBehaviour
     {
         _finalTurtlePosition = target.transform.position;
         aStar = GameObject.FindWithTag("aStar");
-        // seeker = GameObject.FindWithTag("aStar_Seeker");
-        // target = GameObject.FindWithTag("aStar_Target");
+        PathWalkComponent = GetComponent<PathWalk>();
 
         _grid = aStar.GetComponent<Grid>();
 
@@ -56,9 +57,9 @@ public class RandomizeInitialTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AStar.Instance.FindPath(seeker.transform.position, target.transform.position);
+        AStar.Instance.FindPath(seeker.transform.position, target.transform.position, ref PathWalkComponent.Path);
 
-        if (transform.position == _grid.Path.Last().WorldPos && !_hasHitFirstTarget)
+        if (transform.position == PathWalkComponent.Path.Last().WorldPos && !_hasHitFirstTarget)
         {
             _hasHitFirstTarget = true;
 

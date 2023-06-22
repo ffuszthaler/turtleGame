@@ -7,11 +7,12 @@ public class AStar : MonoBehaviour
     // public Transform seeker;
     // public Transform target;
 
+    // public List<Node> Path;
     private Grid _grid;
 
     public static AStar Instance;
 
-    public void FindPath(Vector3 startPos, Vector3 targetPos)
+    public void FindPath(Vector3 startPos, Vector3 targetPos, ref List<Node> Path)
     {
         Node startNode = _grid.NodeFromWorldPoint(startPos);
         Node targetNode = _grid.NodeFromWorldPoint(targetPos);
@@ -39,7 +40,7 @@ public class AStar : MonoBehaviour
 
             if (node == targetNode)
             {
-                RetracePath(startNode, targetNode);
+                RetracePath(startNode, targetNode, ref Path);
                 return;
             }
 
@@ -67,7 +68,7 @@ public class AStar : MonoBehaviour
         }
     }
 
-    void RetracePath(Node startNode, Node endNode)
+    void RetracePath(Node startNode, Node endNode, ref List<Node> Path)
     {
         List<Node> path = new List<Node>();
         Node currentNode = endNode;
@@ -80,7 +81,7 @@ public class AStar : MonoBehaviour
 
         path.Reverse();
 
-        _grid.Path = path;
+        Path = path;
     }
 
     int GetDistance(Node nodeA, Node nodeB)

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
+    public AStar aStar;
+
     public LayerMask unwalkableMask;
     public Vector2 gridWorldSize;
     public float nodeRadius;
@@ -70,30 +72,28 @@ public class Grid : MonoBehaviour
         return neighbours;
     }
 
-    public List<Node> Path;
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, 1, gridWorldSize.y));
-
-        if (_grid != null)
-        {
-            foreach (Node node in _grid)
-            {
-                Gizmos.color = (node.Walkable) ? Color.white : Color.red;
-
-                if (Path != null)
-                {
-                    if (Path.Contains(node))
-                    {
-                        Gizmos.color = Color.black;
-                    }
-                }
-
-                // Gizmos.DrawCube(node.WorldPos, Vector3.one * (_nodeDiameter - .1f));
-            }
-        }
-    }
+    // private void OnDrawGizmos()
+    // {
+    //     Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, 1, gridWorldSize.y));
+    //
+    //     if (_grid != null)
+    //     {
+    //         foreach (Node node in _grid)
+    //         {
+    //             Gizmos.color = (node.Walkable) ? Color.white : Color.red;
+    //
+    //             if (aStar.Path != null)
+    //             {
+    //                 if (aStar.Path.Contains(node))
+    //                 {
+    //                     Gizmos.color = Color.black;
+    //                 }
+    //             }
+    //
+    //             // Gizmos.DrawCube(node.WorldPos, Vector3.one * (_nodeDiameter - .1f));
+    //         }
+    //     }
+    // }
 
     private void Awake()
     {

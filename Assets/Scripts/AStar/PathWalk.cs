@@ -9,8 +9,11 @@ using AnimationEaseInOut;
 public class PathWalk : MonoBehaviour
 {
     public GameObject aStar;
+    private AStar aStarComponent;
 
     private Grid _grid;
+
+    public List<Node> Path = new List<Node>();
 
     // variables for ease-in ease-out functions
     public bool isMoveForward = true;
@@ -26,13 +29,14 @@ public class PathWalk : MonoBehaviour
         // required for new turtle instance to find aStar gameobject
         // uninitialized prefabs cannnot access exiting gameobjects
         aStar = GameObject.FindWithTag("aStar");
+        aStarComponent = aStar.GetComponent<AStar>();
         _grid = aStar.GetComponent<Grid>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_grid.Path == null)
+        if (Path == null)
             return;
 
         // Debug.Log("path array index: " + nextCoordID);
@@ -41,7 +45,7 @@ public class PathWalk : MonoBehaviour
         {
             WalkForward();
 
-            if (currentCoordID == _grid.Path.Count - 1)
+            if (currentCoordID == Path.Count - 1)
             {
                 Debug.Log("astar done");
                 // _isMoveForward = !_isMoveForward;
@@ -64,26 +68,26 @@ public class PathWalk : MonoBehaviour
     {
         // rotate toward the target 
         transform.forward = Vector3.RotateTowards(transform.forward,
-            _grid.Path[nextCoordID].WorldPos - transform.position, _rotateSpeed * Time.deltaTime, 0.0f);
+            Path[nextCoordID].WorldPos - transform.position, _rotateSpeed * Time.deltaTime, 0.0f);
 
         _accumulatedTime += Time.deltaTime;
 
-        transform.position = EaseInOut.MoveTowardSmoothstep(_grid.Path[currentCoordID].WorldPos,
-            _grid.Path[nextCoordID].WorldPos, _accumulatedTime);
+        transform.position = EaseInOut.MoveTowardSmoothstep(Path[currentCoordID].WorldPos,
+            Path[nextCoordID].WorldPos, _accumulatedTime);
 
         // move to the next edge segment
-        if (transform.position == _grid.Path[nextCoordID].WorldPos)
+        if (transform.position == Path[nextCoordID].WorldPos)
         {
             currentCoordID++;
 
-            if (currentCoordID <= _grid.Path.Count - 2)
+            if (currentCoordID <= Path.Count - 2)
             {
                 nextCoordID = currentCoordID + 1;
                 _accumulatedTime = 0;
             }
             else
             {
-                nextCoordID = _grid.Path.Count() - 2;
+                nextCoordID = Path.Count() - 2;
                 _accumulatedTime = 0;
                 currentCoordID--;
             }
@@ -94,15 +98,15 @@ public class PathWalk : MonoBehaviour
     {
         // rotate toward the target 
         transform.forward = Vector3.RotateTowards(transform.forward,
-            _grid.Path[nextCoordID].WorldPos - transform.position, _rotateSpeed * Time.deltaTime, 0.0f);
+            Path[nextCoordID].WorldPos - transform.position, _rotateSpeed * Time.deltaTime, 0.0f);
 
         _accumulatedTime += Time.deltaTime;
 
-        transform.position = EaseInOut.MoveTowardSmoothstep(_grid.Path[currentCoordID].WorldPos,
-            _grid.Path[nextCoordID].WorldPos, _accumulatedTime);
+        transform.position = EaseInOut.MoveTowardSmoothstep(Path[currentCoordID].WorldPos,
+            Path[nextCoordID].WorldPos, _accumulatedTime);
 
         // move to the next edge segment
-        if (transform.position == _grid.Path[nextCoordID].WorldPos)
+        if (transform.position == Path[nextCoordID].WorldPos)
         {
             currentCoordID--;
 
