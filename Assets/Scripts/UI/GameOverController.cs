@@ -21,9 +21,9 @@ public class GameOverController : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("MainMenu");
     }
-    
+
     private void Start()
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
 }
