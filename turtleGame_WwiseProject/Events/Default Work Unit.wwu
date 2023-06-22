@@ -14,6 +14,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Footsteps" ID="{57BC33CC-0CB4-402F-88BF-3FD452A4FEA2}">
+					<ChildrenList>
+						<Action Name="" ID="{AE091D56-BA0A-4558-8F29-845022B64147}" ShortID="319146180">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="foley_footsteps_sand" ID="{30BE1A89-2E9E-4A5F-9BF3-A90115823256}" WorkUnitID="{970C25CD-7F78-49B5-8AE1-ED410D324C98}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UkeLevel1" ID="{C06A501F-F037-45B7-AAF0-1CF0632FF15E}">
+					<ChildrenList>
+						<Action Name="" ID="{F9DA4DB3-A2D0-4F5A-85A3-3730020AC774}" ShortID="731768867">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="238076__yourliver__ukewave" ID="{A6C8C26E-551C-4905-A000-3BA7CD09FDF0}" WorkUnitID="{970C25CD-7F78-49B5-8AE1-ED410D324C98}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_trash" ID="{02D95C45-50A9-4FDB-95B9-8E3893B1C762}">
+					<ChildrenList>
+						<Action Name="" ID="{95CE8825-DFD5-4970-872C-A20C91D587B8}" ShortID="394077361">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="trash" ID="{DE009250-F613-494C-AC4F-1A74AE706A7E}" WorkUnitID="{970C25CD-7F78-49B5-8AE1-ED410D324C98}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

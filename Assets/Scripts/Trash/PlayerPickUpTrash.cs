@@ -11,6 +11,7 @@ public class PlayerPickUpTrash : MonoBehaviour
 
         if (raycastHit.collider.tag == "Trash")
         {
+            AkSoundEngine.PostEvent("Play_trash", gameObject); 
             Destroy(raycastHit.collider.gameObject);
             GameStats.Instance.IncreaseTrashScore(1);
         }

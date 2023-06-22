@@ -1,6 +1,22 @@
 Event	ID	Name			Wwise Object Path	Notes
+	264656916	Play_trash			\Default Work Unit\Play_trash	
 	374167564	Play_waves			\Default Work Unit\Play_waves	
+	1928011088	Play_UkeLevel1			\Default Work Unit\Play_UkeLevel1	
+	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	5681584	step_05	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_5067792B.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step_05		25766
+	96663450	238076__yourliver__ukewave	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\238076__yourliver__ukewave_76AA79F2.wem		\Actor-Mixer Hierarchy\Default Work Unit\238076__yourliver__ukewave		4631972
+	110186346	step_01	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_1D94A18B.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step_01		38616
+	332361398	step_07	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_EBC598E0.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step_07		42290
+	394794849	step_06	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_5AEA1B1D.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step_06		34944
+	397761212	trash	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\655630__hankof__plastic-bag_FD23647F.wem		\Actor-Mixer Hierarchy\Default Work Unit\trash\trash		64832
+	445600590	trash_01	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\655630__hankof__plastic-bag_14072EFB.wem		\Actor-Mixer Hierarchy\Default Work Unit\trash\trash_01		55028
+	528195882	step_03	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_A7531582.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step_03		38618
+	531351532	step_02	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_21A26DDA.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step_02		33110
+	569718341	trash_03	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\655630__hankof__plastic-bag_37342983.wem		\Actor-Mixer Hierarchy\Default Work Unit\trash\trash_03		46084
+	727945982	step_04	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_D317DC62.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step_04		36780
+	889285376	step	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_D13C17B5.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step		25766
 	899486513	320303__sophronsinesounddesign__beach-8	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\320303__sophronsinesounddesign__beach-8_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\320303__sophronsinesounddesign__beach-8		4091840
+	930465887	trash_02	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\655630__hankof__plastic-bag_10F68B51.wem		\Actor-Mixer Hierarchy\Default Work Unit\trash\trash_02		48636
 

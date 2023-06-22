@@ -5,7 +5,10 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{EE5DA9B9-5741-4173-89D2-5A1C9EF17F5B}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_Footsteps" ID="{57BC33CC-0CB4-402F-88BF-3FD452A4FEA2}" WorkUnitID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UkeLevel1" ID="{C06A501F-F037-45B7-AAF0-1CF0632FF15E}" WorkUnitID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_waves" ID="{DF83951B-0B2C-481D-B9BF-DE6424DA2212}" WorkUnitID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_trash" ID="{02D95C45-50A9-4FDB-95B9-8E3893B1C762}" WorkUnitID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

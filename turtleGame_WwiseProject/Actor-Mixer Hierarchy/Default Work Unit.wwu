@@ -4,6 +4,14 @@
 		<WorkUnit Name="Default Work Unit" ID="{970C25CD-7F78-49B5-8AE1-ED410D324C98}" PersistMode="Standalone">
 			<ChildrenList>
 				<Sound Name="238076__yourliver__ukewave" ID="{A6C8C26E-551C-4905-A000-3BA7CD09FDF0}" ShortID="1051144732">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-33</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
@@ -14,6 +22,12 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="238076__yourliver__ukewave" ID="{5DB3F53D-752F-4977-A497-AD2662291338}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.292345882568471"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="1.32884492076578"/>
+								<Property Name="TrimEnd" Type="Real64" Value="27.5868205550976"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>238076__yourliver__ukewave.wav</AudioFile>
 							<MediaIDList>
@@ -32,7 +46,7 @@
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>-8</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -61,29 +75,6 @@
 						<ActiveSource Name="320303__sophronsinesounddesign__beach-8" ID="{407D419C-F3D1-41A8-9A6F-34398E64FA22}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{8D0E1B34-26CD-4665-860C-96666523DBB1}" ShortID="311989105">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{CFC3118D-0851-46AE-B3DE-4D283C4661AD}">
-							<Language>SFX</Language>
-							<AudioFile>388289__pan14__foley_footsteps_desert_boots_sand.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="889285376"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{CFC3118D-0851-46AE-B3DE-4D283C4661AD}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="486649__serylis__i-sit-and-play-ukulele" ID="{3E40D7D8-3179-4C13-A055-37C282FA657A}" ShortID="14572737">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -107,30 +98,14 @@
 						<ActiveSource Name="486649__serylis__i-sit-and-play-ukulele" ID="{6A6BA2F4-25E6-4CAE-A1CA-45751EEA2D6F}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="655630__hankof__plastic-bag" ID="{20C0EA27-505A-4E6A-AFCA-3E10FB1F1538}" ShortID="700369591">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="655630__hankof__plastic-bag" ID="{7D0FC5C3-D5F1-406F-8334-95171D7E8E86}">
-							<Language>SFX</Language>
-							<AudioFile>655630__hankof__plastic-bag.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="397761212"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="655630__hankof__plastic-bag" ID="{7D0FC5C3-D5F1-406F-8334-95171D7E8E86}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="683400__joker313__seagull1" ID="{D4E47571-83C0-41FC-AC03-14FDD5D6FFF5}" ShortID="216920737">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-11</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
@@ -176,6 +151,765 @@
 						<ActiveSource Name="639933__sergmusic__blue-sky" ID="{4B7B65D6-70E1-46CB-A98A-3FEAC09B9EC5}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<RandomSequenceContainer Name="foley_footsteps_sand" ID="{30BE1A89-2E9E-4A5F-9BF3-A90115823256}" ShortID="725638999">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>9</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="step" ID="{8D0E1B34-26CD-4665-860C-96666523DBB1}" ShortID="311989105">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{CFC3118D-0851-46AE-B3DE-4D283C4661AD}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.74582409315746"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.01355581890629"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>388289__pan14__foley_footsteps_desert_boots_sand.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="889285376"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{CFC3118D-0851-46AE-B3DE-4D283C4661AD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="step_01" ID="{5364EB1A-3E03-4E23-9964-67E5C704E26B}" ShortID="299206545">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{5FD5BFF0-F02C-44A3-AD27-C23E82379B2D}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.994432124209943"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.39602971283319"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>388289__pan14__foley_footsteps_desert_boots_sand.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="110186346"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{5FD5BFF0-F02C-44A3-AD27-C23E82379B2D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="step_02" ID="{C5A3F8BB-0596-494E-AA0D-DF1ADFCC7F5C}" ShortID="168863474">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{27253179-4B69-4E6B-9A5A-78E1309852C2}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.87412208024182"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.21834858477603"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>388289__pan14__foley_footsteps_desert_boots_sand.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="531351532"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{27253179-4B69-4E6B-9A5A-78E1309852C2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="step_03" ID="{4F0629C2-0370-49DE-871C-BDEEB8E52E4B}" ShortID="298444477">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{0A712A7B-35C9-4BF5-BB4C-CE45BAB7D48C}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.29484336356142"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.69644095218465"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>388289__pan14__foley_footsteps_desert_boots_sand.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="528195882"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{0A712A7B-35C9-4BF5-BB4C-CE45BAB7D48C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="step_04" ID="{F1E0DA1E-4AE8-4D63-99DB-A4CEAC3799BC}" ShortID="346394659">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{523DC8F0-45C9-487C-82B2-B6E4FD6DD009}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.86855420445177"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.25102809837866"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>388289__pan14__foley_footsteps_desert_boots_sand.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="727945982"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{523DC8F0-45C9-487C-82B2-B6E4FD6DD009}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="step_05" ID="{E0AF743E-FC82-482D-B120-5CABCAC8F6F5}" ShortID="637663653">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{67B10A62-D5E3-4593-B18F-129352ABCBBA}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.46138874003847"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.72912046578729"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>388289__pan14__foley_footsteps_desert_boots_sand.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="5681584"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{67B10A62-D5E3-4593-B18F-129352ABCBBA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="step_06" ID="{6EE432DB-AF12-4B14-9809-1BC971305D45}" ShortID="283804622">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{23B96F8D-D17C-4CA4-B256-F25602BB58C4}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="5.02953170513877"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.39288190436932"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>388289__pan14__foley_footsteps_desert_boots_sand.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="394794849"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{23B96F8D-D17C-4CA4-B256-F25602BB58C4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="step_07" ID="{77750D11-808D-4D51-9C89-F973052F1C97}" ShortID="732836754">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{673767C3-85A7-4B53-A75E-921D4B6D1FF4}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="5.45025298845836"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.89009796647429"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>388289__pan14__foley_footsteps_desert_boots_sand.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="332361398"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{673767C3-85A7-4B53-A75E-921D4B6D1FF4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="trash" ID="{DE009250-F613-494C-AC4F-1A74AE706A7E}" ShortID="297894569">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="trash" ID="{20C0EA27-505A-4E6A-AFCA-3E10FB1F1538}" ShortID="700369591">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="655630__hankof__plastic-bag" ID="{7D0FC5C3-D5F1-406F-8334-95171D7E8E86}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.033816720972533"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0917882426397325"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0845418024313326"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.451694772990262"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>655630__hankof__plastic-bag.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="397761212"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="655630__hankof__plastic-bag" ID="{7D0FC5C3-D5F1-406F-8334-95171D7E8E86}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="trash_01" ID="{3AA607F6-871A-4E81-AE84-AA0ED72B8B27}" ShortID="866458413">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="655630__hankof__plastic-bag" ID="{9DC4F378-7529-4A33-B19E-90514CA59286}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.033816720972533"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0917882426397325"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.437201892573463"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.748798821534659"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>655630__hankof__plastic-bag.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="445600590"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="655630__hankof__plastic-bag" ID="{9DC4F378-7529-4A33-B19E-90514CA59286}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="trash_02" ID="{278E3B6B-86BB-46B2-9691-C0A5BD1F323A}" ShortID="836730137">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="655630__hankof__plastic-bag" ID="{E6BECCC6-8075-4BF6-B199-3901D75D6530}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.033816720972533"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0917882426397325"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.760876221881993"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.03624094980119"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>655630__hankof__plastic-bag.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="930465887"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="655630__hankof__plastic-bag" ID="{E6BECCC6-8075-4BF6-B199-3901D75D6530}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="trash_03" ID="{B68BBF38-DCBF-4516-BC71-537E49AEA6DD}" ShortID="332934790">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="655630__hankof__plastic-bag" ID="{A48D626D-CA96-48C2-ACBE-441AE7D45380}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.033816720972533"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0917882426397325"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.40097844029065"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.66185028779305"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>655630__hankof__plastic-bag.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="569718341"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="655630__hankof__plastic-bag" ID="{A48D626D-CA96-48C2-ACBE-441AE7D45380}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Seagull" ID="{1897A11F-5386-463F-A7FB-71EF090B1082}" ShortID="846218288">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="seagull" ID="{E072B996-F05C-436D-A364-8769226DC0AC}" ShortID="591670198">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="683400__joker313__seagull1" ID="{DBD4C273-D9D3-4286-9F1C-5BC79755B908}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.223598567600989"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0549832543281121"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.109966508656224"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.601150247320693"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>683400__joker313__seagull1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="757313866"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="683400__joker313__seagull1" ID="{DBD4C273-D9D3-4286-9F1C-5BC79755B908}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="seagull_01" ID="{60D82430-72C2-4124-BCFD-1BA8890DA242}" ShortID="140772318">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="683400__joker313__seagull1" ID="{CEC6A35F-C7F8-4378-BDD3-1767C34E9150}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0513177040395712"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.252922969909316"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.993364128194559"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.33059475474031"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>683400__joker313__seagull1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="788945894"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="683400__joker313__seagull1" ID="{CEC6A35F-C7F8-4378-BDD3-1767C34E9150}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="seagull_02" ID="{C7F30EF7-8DB4-44C5-A507-5ACE545B905B}" ShortID="13062795">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="683400__joker313__seagull1" ID="{8827B244-3323-48B3-B53E-F4D419111A0F}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0513177040395712"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0293244023083267"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.11868806677659"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.5328952493817"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>683400__joker313__seagull1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="124685840"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="683400__joker313__seagull1" ID="{8827B244-3323-48B3-B53E-F4D419111A0F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="seagull_03" ID="{05823961-98C9-47B0-9ACD-7AAAC13EC4C1}" ShortID="501991032">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="683400__joker313__seagull1" ID="{ECBDA116-A4C8-4676-87E6-5EA1FB77B647}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0513177040395712"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0293244023083267"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.66118950948063"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.07906224237428"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>683400__joker313__seagull1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="199522044"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="683400__joker313__seagull1" ID="{ECBDA116-A4C8-4676-87E6-5EA1FB77B647}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="seagull_04" ID="{8B3A5543-C242-4257-9FF6-71BE73E9C5EA}" ShortID="1029328059">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="683400__joker313__seagull1" ID="{FB729A3B-711A-4A9D-9B10-59CC542972ED}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0513177040395712"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0293244023083267"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.02774453833471"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.46761057295961"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>683400__joker313__seagull1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="464636964"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="683400__joker313__seagull1" ID="{FB729A3B-711A-4A9D-9B10-59CC542972ED}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Hey-Shouting" ID="{F6D28ACE-6311-4A86-820A-4822E8DC5EE8}" ShortID="713192815">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="heys" ID="{D065CB75-2B88-4577-A479-7E1F35CFC80E}" ShortID="659748837">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="hey" ID="{D16D3EA7-3030-4F14-879C-D8935B5999EB}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="21.4660632266097"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="21.4273856352104"/>
+										<Property Name="TrimEnd" Type="Real64" Value="22.4716806029914"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>heys.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1737660"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="hey" ID="{D16D3EA7-3030-4F14-879C-D8935B5999EB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="heys_01" ID="{F7D8D7EC-75B6-438F-8768-B842EE89986D}" ShortID="848184132">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="hey" ID="{4090D87D-980A-4424-A16B-1B1F704C4EF5}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="21.4660632266097"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.17156249474234"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.82908154853039"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>heys.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="557893478"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="hey" ID="{4090D87D-980A-4424-A16B-1B1F704C4EF5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="heys_02" ID="{DC8595DE-CA6F-4F5A-93E5-3BED4D3FEDEF}" ShortID="481136980">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="hey" ID="{E7B937BE-5F1D-4F97-8F5F-DB63C843E743}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="21.4660632266097"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="4.29321264532194"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.02808688190859"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>heys.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="697223243"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="hey" ID="{E7B937BE-5F1D-4F97-8F5F-DB63C843E743}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="heys_03" ID="{A417B4CA-426A-4341-A083-B82E6CA25CC0}" ShortID="669187122">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="hey" ID="{7DD7A7C3-CC6D-43AE-94FF-9AFBDB929578}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="31.1354610764339"/>
+										<Property Name="TrimEnd" Type="Real64" Value="31.8316577216212"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>heys.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="82018250"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="hey" ID="{7DD7A7C3-CC6D-43AE-94FF-9AFBDB929578}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
