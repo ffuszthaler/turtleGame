@@ -8,16 +8,18 @@ public class GameStats : MonoBehaviour
     public static GameStats Instance;
 
     [field: SerializeField] public float trashScore { private set; get; }
+    private float _maxTrashCount = 10f;
     [field: SerializeField] public float turtleScore { private set; get; }
+    private float _maxTurtleCount = 5f;
 
     public void IncreaseTrashScore(float value)
     {
         trashScore += value;
         Debug.Log("Trash Score: " + trashScore);
 
-        if (trashScore == 3f)
+        if (trashScore == _maxTrashCount)
         {
-            SceneManager.LoadSceneAsync("GameOver");
+            SceneManager.LoadSceneAsync("Level02");
         }
     }
 
@@ -26,8 +28,7 @@ public class GameStats : MonoBehaviour
         turtleScore += value;
         Debug.Log("Turtle Score: " + trashScore);
 
-        // TODO: this is temporary
-        if (turtleScore == 5f)
+        if (turtleScore == _maxTurtleCount)
         {
             SceneManager.LoadSceneAsync("GameWin");
         }
