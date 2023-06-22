@@ -1,0 +1,291 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5922581994810030458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2715345500680420498}
+  - component: {fileID: 7653502152989522236}
+  - component: {fileID: 6061944447536621788}
+  - component: {fileID: 8364076342060472914}
+  - component: {fileID: 7637953750515321218}
+  m_Layer: 0
+  m_Name: DialogueTriggerLevel1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2715345500680420498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922581994810030458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.96, y: 1.16, z: -4.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &7653502152989522236
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922581994810030458}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &6061944447536621788
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922581994810030458}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &8364076342060472914
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922581994810030458}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7637953750515321218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922581994810030458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9854a7c4b1f35474ea46b0b2293d4381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueDisplay: {fileID: 0}
+  textElement: {fileID: 0}
+  answer1Button: {fileID: 0}
+  answer2Button: {fileID: 0}
+  dialogueElements:
+  - dialogueText: 'Hey there! I noticed you''re here to pick up trash. That''s awesome!
+      I''m Gary, by the way. '
+    answerText1: Hi
+    answerAction1:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7637953750515321218}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: LoadDialogueElements
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    answerText2: Just doing my part.
+    answerAction2:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7637953750515321218}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: LoadDialogueElements
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - dialogueText: "I\u2019m the owner of our surf stand and teach surfing lessons
+      here! It's my way of enjoying the ocean and giving back. Have you ever tried
+      surfing?"
+    answerText1: Never
+    answerAction1:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7637953750515321218}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: LoadDialogueElements
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    answerText2: Once, but then I took an arrow to the knee.
+    answerAction2:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7637953750515321218}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: LoadDialogueElements
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - dialogueText: Well, if you're interested, I can give you some basic tips and
+      get you started. It's an amazing way to connect with the ocean. But for now,
+      let's focus on the beach cleanup.
+    answerText1: Sure.
+    answerAction1:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7637953750515321218}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: LoadDialogueElements
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    answerText2: You are right.
+    answerAction2:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7637953750515321218}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: LoadDialogueElements
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - dialogueText: One important thing to remember is that this beach is known to
+      have turtle hatchlings around this time of year. They're quite vulnerable,
+      so we need to be careful while picking up trash. Keep an eye out for any signs
+      of turtle activity and avoid disturbing their nests.
+    answerText1: Of course.
+    answerAction1:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7637953750515321218}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: LoadDialogueElements
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    answerText2: I'll be careful.
+    answerAction2:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7637953750515321218}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: LoadDialogueElements
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - dialogueText: If you have any questions or need further assistance, feel free
+      to ask. Good luck with the cleanup!
+    answerText1: Will do.
+    answerAction1:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7637953750515321218}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: CloseDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    answerText2: Thanks for the heads up.
+    answerAction2:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7637953750515321218}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: CloseDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

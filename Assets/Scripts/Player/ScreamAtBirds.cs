@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class ScreamAtBirds : MonoBehaviour
 {
+    // public AK.Wwise.Event shout;
+
     private void ScreamAtBird()
     {
         Transform player = transform.parent.GetChild(1);
@@ -31,9 +33,16 @@ public class ScreamAtBirds : MonoBehaviour
     void OnScream(InputValue input)
     {
         RaycastHit raycastHit = PlayerRaycast.ShootRay();
+        if (raycastHit.collider == null)
+        {
+            return;
+        }
 
         if (raycastHit.collider.tag == "Seagull")
         {
+            AkSoundEngine.PostEvent("Play_Hey_Shouting", gameObject);
+
+
             AIBirdMovement._flyAwayEnabled = true;
             ScreamAtBird();
         }

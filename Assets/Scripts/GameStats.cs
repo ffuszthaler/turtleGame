@@ -28,10 +28,15 @@ public class GameStats : MonoBehaviour
         turtleScore += value;
         Debug.Log("Turtle Score: " + trashScore);
 
-        if (turtleScore == _maxTurtleCount)
+        if (turtleScore > 0)
         {
             SceneManager.LoadSceneAsync("GameWin");
         }
+
+        if (turtleScore == 0 && AIBirdMovement.turtles.Length == 0)
+        {
+            SceneManager.LoadSceneAsync("GameOver");
+        } 
     }
 
     // Start is called before the first frame update

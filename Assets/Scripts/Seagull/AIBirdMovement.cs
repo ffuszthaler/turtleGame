@@ -114,6 +114,7 @@ public class AIBirdMovement : MonoBehaviour
             return;
         }
 
+
         if (!turtleSelected)
         {
             if (turtles.Length != 0)
@@ -130,6 +131,7 @@ public class AIBirdMovement : MonoBehaviour
             GetComponent<NavMeshAgent>().enabled = false;
 
             var step = speed * Time.deltaTime;
+
             transform.position = Vector3.MoveTowards(transform.position, turtle.transform.position, step);
 
             var lookPos = turtle.transform.position - transform.position;

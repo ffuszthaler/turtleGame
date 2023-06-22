@@ -14,8 +14,13 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_HEY_SHOUTING = 3812936926U;
+        static const AkUniqueID PLAY_SEAGULLS = 4281176146U;
         static const AkUniqueID PLAY_TRASH = 264656916U;
+        static const AkUniqueID PLAY_TURTLEHURT = 1013081543U;
+        static const AkUniqueID PLAY_TURTLEWALK = 2481075495U;
         static const AkUniqueID PLAY_UKELEVEL1 = 1928011088U;
+        static const AkUniqueID PLAY_UKELEVEL2 = 1928011091U;
         static const AkUniqueID PLAY_WAVES = 374167564U;
     } // namespace EVENTS
 

@@ -78,6 +78,7 @@ public class PathWalk : MonoBehaviour
         // move to the next edge segment
         if (transform.position == Path[nextCoordID].WorldPos)
         {
+            AkSoundEngine.PostEvent("Play_turtlewalk", gameObject);
             currentCoordID++;
 
             if (currentCoordID <= Path.Count - 2)

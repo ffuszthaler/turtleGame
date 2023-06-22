@@ -6,8 +6,13 @@
 				<SoundBank Name="Main" ID="{EE5DA9B9-5741-4173-89D2-5A1C9EF17F5B}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Footsteps" ID="{57BC33CC-0CB4-402F-88BF-3FD452A4FEA2}" WorkUnitID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_turtlewalk" ID="{FA3C7DE6-889C-4262-AE20-4590009962F2}" WorkUnitID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Hey_Shouting" ID="{C2E7CF41-1B2C-4417-891A-6A44507569D7}" WorkUnitID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UkeLevel1" ID="{C06A501F-F037-45B7-AAF0-1CF0632FF15E}" WorkUnitID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_waves" ID="{DF83951B-0B2C-481D-B9BF-DE6424DA2212}" WorkUnitID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_seagulls" ID="{447A4F3C-3E10-499F-9ECE-4667F4BE28CD}" WorkUnitID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_turtlehurt" ID="{7390FC81-B56A-4B54-B20E-18599A6E58A5}" WorkUnitID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_ukeLevel2" ID="{E6BFF02D-DEDD-4DB0-8CAF-FB95EE12D81F}" WorkUnitID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_trash" ID="{02D95C45-50A9-4FDB-95B9-8E3893B1C762}" WorkUnitID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

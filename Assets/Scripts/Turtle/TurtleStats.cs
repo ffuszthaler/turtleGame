@@ -9,14 +9,14 @@ public class TurtleStats : MonoBehaviour
 
     public void ReduceHealth(float amount)
     {
+        AkSoundEngine.PostEvent("Play_turtlehurt", gameObject);
         turtleHealth -= amount;
 
         if (turtleHealth == 0f)
         {
             Destroy(transform.parent.gameObject);
         }
-        
-        
+
 
         Debug.Log("Enemy Health: " + turtleHealth);
     }

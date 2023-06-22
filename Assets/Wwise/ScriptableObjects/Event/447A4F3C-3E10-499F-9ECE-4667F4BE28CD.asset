@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a5cf9d87841984d92757d998c5bd76, type: 3}
+  m_Name: 447A4F3C-3E10-499F-9ECE-4667F4BE28CD
+  m_EditorClassIdentifier: 
+  objectName: Play_seagulls
+  id: 4281176146
+  guid: 447A4F3C-3E10-499F-9ECE-4667F4BE28CD

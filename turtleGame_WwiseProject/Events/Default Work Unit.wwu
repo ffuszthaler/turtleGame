@@ -47,6 +47,61 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Hey_Shouting" ID="{C2E7CF41-1B2C-4417-891A-6A44507569D7}">
+					<ChildrenList>
+						<Action Name="" ID="{790E1A40-A63B-4760-8F5A-9F6A259264A5}" ShortID="283420136">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Hey-Shouting" ID="{F6D28ACE-6311-4A86-820A-4822E8DC5EE8}" WorkUnitID="{970C25CD-7F78-49B5-8AE1-ED410D324C98}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ukeLevel2" ID="{E6BFF02D-DEDD-4DB0-8CAF-FB95EE12D81F}">
+					<ChildrenList>
+						<Action Name="" ID="{D083E3AC-E3C1-4AB3-A4AF-D1BF5D418C73}" ShortID="769950055">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="486649__serylis__i-sit-and-play-ukulele" ID="{3E40D7D8-3179-4C13-A055-37C282FA657A}" WorkUnitID="{970C25CD-7F78-49B5-8AE1-ED410D324C98}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_turtlehurt" ID="{7390FC81-B56A-4B54-B20E-18599A6E58A5}">
+					<ChildrenList>
+						<Action Name="" ID="{2B5CFB7C-AE6B-4AB5-90BB-B909FCFB6201}" ShortID="543841189">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="turtlehurt" ID="{FEB97D71-81FE-4081-8556-86A4EBC1F748}" WorkUnitID="{970C25CD-7F78-49B5-8AE1-ED410D324C98}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_turtlewalk" ID="{FA3C7DE6-889C-4262-AE20-4590009962F2}">
+					<ChildrenList>
+						<Action Name="" ID="{3ECAF4BB-6AC2-47CE-8FD4-BE1FB618450B}" ShortID="50282143">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Turtle-Walk" ID="{68873287-7D5C-4F2B-A36E-608A045EE886}" WorkUnitID="{970C25CD-7F78-49B5-8AE1-ED410D324C98}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_seagulls" ID="{447A4F3C-3E10-499F-9ECE-4667F4BE28CD}">
+					<ChildrenList>
+						<Action Name="" ID="{88BB4502-E9C2-43E1-9DC6-7C93DD44F0AF}" ShortID="478967658">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="586831__speakingmusic__seagull" ID="{19D02D31-0B44-41E6-B886-DCFB97A8A4F8}" WorkUnitID="{970C25CD-7F78-49B5-8AE1-ED410D324C98}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

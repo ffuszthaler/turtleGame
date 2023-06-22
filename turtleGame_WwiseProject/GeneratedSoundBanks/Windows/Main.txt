@@ -1,20 +1,35 @@
 Event	ID	Name			Wwise Object Path	Notes
 	264656916	Play_trash			\Default Work Unit\Play_trash	
 	374167564	Play_waves			\Default Work Unit\Play_waves	
+	1013081543	Play_turtlehurt			\Default Work Unit\Play_turtlehurt	
 	1928011088	Play_UkeLevel1			\Default Work Unit\Play_UkeLevel1	
+	1928011091	Play_ukeLevel2			\Default Work Unit\Play_ukeLevel2	
+	2481075495	Play_turtlewalk			\Default Work Unit\Play_turtlewalk	
+	3812936926	Play_Hey_Shouting			\Default Work Unit\Play_Hey_Shouting	
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
+	4281176146	Play_seagulls			\Default Work Unit\Play_seagulls	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1737660	heys	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\heys_32E49710.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hey-Shouting\heys		143340
 	5681584	step_05	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_5067792B.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step_05		25766
+	20175535	586831__speakingmusic__seagull	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\586831__speakingmusic__seagull_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\586831__speakingmusic__seagull		5928448
+	82018250	heys_03	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\heys_31D4CF2D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hey-Shouting\heys_03		88760
 	96663450	238076__yourliver__ukewave	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\238076__yourliver__ukewave_76AA79F2.wem		\Actor-Mixer Hierarchy\Default Work Unit\238076__yourliver__ukewave		4631972
+	101476751	turtlewalk_02	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\turtlewalk_1D7AD006.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turtle-Walk\turtlewalk_02		22378
 	110186346	step_01	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_1D94A18B.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step_01		38616
+	131475367	turtlewalk_01	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\turtlewalk_CBB36CFA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turtle-Walk\turtlewalk_01		15238
+	239844163	486649__serylis__i-sit-and-play-ukulele	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\486649__serylis__i-sit-and-play-ukulele_C05F8E1C.wem		\Actor-Mixer Hierarchy\Default Work Unit\486649__serylis__i-sit-and-play-ukulele		7158940
 	332361398	step_07	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_EBC598E0.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step_07		42290
 	394794849	step_06	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_5AEA1B1D.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step_06		34944
 	397761212	trash	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\655630__hankof__plastic-bag_FD23647F.wem		\Actor-Mixer Hierarchy\Default Work Unit\trash\trash		64832
 	445600590	trash_01	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\655630__hankof__plastic-bag_14072EFB.wem		\Actor-Mixer Hierarchy\Default Work Unit\trash\trash_01		55028
 	528195882	step_03	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_A7531582.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step_03		38618
 	531351532	step_02	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_21A26DDA.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step_02		33110
+	557893478	heys_01	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\heys_9F62E329.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hey-Shouting\heys_01		81936
 	569718341	trash_03	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\655630__hankof__plastic-bag_37342983.wem		\Actor-Mixer Hierarchy\Default Work Unit\trash\trash_03		46084
+	687884839	turtlewalk	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\turtlewalk_CCC6C20F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Turtle-Walk\turtlewalk		28626
+	697223243	heys_02	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\heys_E5D623AC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hey-Shouting\heys_02		88760
+	714398155	turtlehurt	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\turtlehurt_ED8BDA64.wem		\Actor-Mixer Hierarchy\Default Work Unit\turtlehurt		137480
 	727945982	step_04	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_D317DC62.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step_04		36780
 	889285376	step	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\388289__pan14__foley_footsteps_desert_boots_sand_D13C17B5.wem		\Actor-Mixer Hierarchy\Default Work Unit\foley_footsteps_sand\step		25766
 	899486513	320303__sophronsinesounddesign__beach-8	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Windows\SFX\320303__sophronsinesounddesign__beach-8_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\320303__sophronsinesounddesign__beach-8		4091840

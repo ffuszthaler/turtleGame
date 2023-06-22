@@ -10,7 +10,7 @@ public class TrashSpawnRandomizer : MonoBehaviour
     private Vector3 CalculatePossibleSpawnPoints()
     {
         Vector3 randomSpawnPoint = Random.insideUnitSphere * _radius;
-        randomSpawnPoint.y = 0.5f;
+        randomSpawnPoint.y = 0.1f;
 
         return randomSpawnPoint;
     }
