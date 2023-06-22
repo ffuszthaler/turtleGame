@@ -1,6 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{970C25CD-7F78-49B5-8AE1-ED410D324C98}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{970C25CD-7F78-49B5-8AE1-ED410D324C98}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{970C25CD-7F78-49B5-8AE1-ED410D324C98}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="238076__yourliver__ukewave" ID="{A6C8C26E-551C-4905-A000-3BA7CD09FDF0}" ShortID="1051144732">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="238076__yourliver__ukewave" ID="{5DB3F53D-752F-4977-A497-AD2662291338}">
+							<Language>SFX</Language>
+							<AudioFile>238076__yourliver__ukewave.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="96663450"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="238076__yourliver__ukewave" ID="{5DB3F53D-752F-4977-A497-AD2662291338}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="320303__sophronsinesounddesign__beach-8" ID="{FF2BE3BA-ED95-4680-B02E-5CBF195981E0}" ShortID="863929473">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="OceanAttenuation" ID="{4D56CB72-9B1D-4918-9AA2-A1C2151934AB}" WorkUnitID="{1019F4CB-FDC6-4403-8F53-C7BA7B9C1433}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="320303__sophronsinesounddesign__beach-8" ID="{407D419C-F3D1-41A8-9A6F-34398E64FA22}">
+							<Language>SFX</Language>
+							<AudioFile>320303__sophronsinesounddesign__beach-8.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="899486513"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="320303__sophronsinesounddesign__beach-8" ID="{407D419C-F3D1-41A8-9A6F-34398E64FA22}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{8D0E1B34-26CD-4665-860C-96666523DBB1}" ShortID="311989105">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{CFC3118D-0851-46AE-B3DE-4D283C4661AD}">
+							<Language>SFX</Language>
+							<AudioFile>388289__pan14__foley_footsteps_desert_boots_sand.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="889285376"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="388289__pan14__foley_footsteps_desert_boots_sand" ID="{CFC3118D-0851-46AE-B3DE-4D283C4661AD}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="486649__serylis__i-sit-and-play-ukulele" ID="{3E40D7D8-3179-4C13-A055-37C282FA657A}" ShortID="14572737">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="486649__serylis__i-sit-and-play-ukulele" ID="{6A6BA2F4-25E6-4CAE-A1CA-45751EEA2D6F}">
+							<Language>SFX</Language>
+							<AudioFile>486649__serylis__i-sit-and-play-ukulele.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="239844163"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="486649__serylis__i-sit-and-play-ukulele" ID="{6A6BA2F4-25E6-4CAE-A1CA-45751EEA2D6F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="655630__hankof__plastic-bag" ID="{20C0EA27-505A-4E6A-AFCA-3E10FB1F1538}" ShortID="700369591">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="655630__hankof__plastic-bag" ID="{7D0FC5C3-D5F1-406F-8334-95171D7E8E86}">
+							<Language>SFX</Language>
+							<AudioFile>655630__hankof__plastic-bag.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="397761212"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="655630__hankof__plastic-bag" ID="{7D0FC5C3-D5F1-406F-8334-95171D7E8E86}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="683400__joker313__seagull1" ID="{D4E47571-83C0-41FC-AC03-14FDD5D6FFF5}" ShortID="216920737">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="683400__joker313__seagull1" ID="{8D4DA8BE-E2F7-451D-AE80-A0A2052946DC}">
+							<Language>SFX</Language>
+							<AudioFile>683400__joker313__seagull1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="850535393"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="683400__joker313__seagull1" ID="{8D4DA8BE-E2F7-451D-AE80-A0A2052946DC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="639933__sergmusic__blue-sky" ID="{23B16A47-AB26-4F03-9F58-11CAB2A82AE3}" ShortID="141442379">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="639933__sergmusic__blue-sky" ID="{4B7B65D6-70E1-46CB-A98A-3FEAC09B9EC5}">
+							<Language>SFX</Language>
+							<AudioFile>639933__sergmusic__blue-sky.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="212304542"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="639933__sergmusic__blue-sky" ID="{4B7B65D6-70E1-46CB-A98A-3FEAC09B9EC5}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

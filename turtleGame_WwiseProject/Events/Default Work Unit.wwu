@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{CBD73D9B-9899-40F7-8694-837A6E6561A7}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_waves" ID="{DF83951B-0B2C-481D-B9BF-DE6424DA2212}">
+					<ChildrenList>
+						<Action Name="" ID="{C4FC605A-7CB2-48C8-9AE7-47036A27794B}" ShortID="277818369">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="320303__sophronsinesounddesign__beach-8" ID="{FF2BE3BA-ED95-4680-B02E-5CBF195981E0}" WorkUnitID="{970C25CD-7F78-49B5-8AE1-ED410D324C98}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

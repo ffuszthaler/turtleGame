@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1019F4CB-FDC6-4403-8F53-C7BA7B9C1433}" SchemaVersion="103">
 	<Attenuations>
-		<WorkUnit Name="Default Work Unit" ID="{1019F4CB-FDC6-4403-8F53-C7BA7B9C1433}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{1019F4CB-FDC6-4403-8F53-C7BA7B9C1433}" PersistMode="Standalone">
+			<ChildrenList>
+				<Attenuation Name="OceanAttenuation" ID="{4D56CB72-9B1D-4918-9AA2-A1C2151934AB}" ShortID="4127868">
+					<PropertyList>
+						<Property Name="ConeAttenuation" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+						<Property Name="ConeInnerAngle" Type="int32" Value="170"/>
+						<Property Name="ConeOuterAngle" Type="int32" Value="310"/>
+						<Property Name="RadiusMax" Type="Real64" Value="1"/>
+					</PropertyList>
+					<CurveUsageInfoList>
+						<VolumeDryUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+								<Curve Name="VolumeDry" ID="{692D4D43-A150-44E7-B9AA-13AF851D9D9B}">
+									<PropertyList>
+										<Property Name="Flags" Type="int32" Value="3"/>
+									</PropertyList>
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>0</YPos>
+											<Flags>5</Flags>
+										</Point>
+										<Point>
+											<XPos>1</XPos>
+											<YPos>-200</YPos>
+											<Flags>37</Flags>
+										</Point>
+									</PointList>
+								</Curve>
+							</CurveUsageInfo>
+						</VolumeDryUsage>
+						<VolumeWetGameUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+						</VolumeWetGameUsage>
+						<VolumeWetUserUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+						</VolumeWetUserUsage>
+						<LowPassFilterUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</LowPassFilterUsage>
+						<HighPassFilterUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</HighPassFilterUsage>
+						<SpreadUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</SpreadUsage>
+						<FocusUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</FocusUsage>
+					</CurveUsageInfoList>
+				</Attenuation>
+			</ChildrenList>
+		</WorkUnit>
 	</Attenuations>
 </WwiseDocument>

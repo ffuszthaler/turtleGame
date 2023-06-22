@@ -32,6 +32,14 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(_moveBy * (walkSpeed * Time.deltaTime));
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Wall1" || collision.gameObject.name == "Wall2")
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

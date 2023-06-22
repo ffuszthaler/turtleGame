@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	374167564	Play_waves			\Default Work Unit\Play_waves	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	899486513	320303__sophronsinesounddesign__beach-8	C:\Users\victo\OneDrive - Fachhochschule St. Pölten\Dokumente\GitHub\turtleGame\turtleGame_WwiseProject\.cache\Mac\SFX\320303__sophronsinesounddesign__beach-8_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\320303__sophronsinesounddesign__beach-8		4091840
+
