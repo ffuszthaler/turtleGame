@@ -143,34 +143,11 @@
 						<ActiveSource Name="683400__joker313__seagull1" ID="{8D4DA8BE-E2F7-451D-AE80-A0A2052946DC}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="639933__sergmusic__blue-sky" ID="{23B16A47-AB26-4F03-9F58-11CAB2A82AE3}" ShortID="141442379">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D2BBE36-F5F3-4564-A059-850B8E8292AE}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="639933__sergmusic__blue-sky" ID="{4B7B65D6-70E1-46CB-A98A-3FEAC09B9EC5}">
-							<Language>SFX</Language>
-							<AudioFile>639933__sergmusic__blue-sky.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="212304542"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="639933__sergmusic__blue-sky" ID="{4B7B65D6-70E1-46CB-A98A-3FEAC09B9EC5}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<RandomSequenceContainer Name="foley_footsteps_sand" ID="{30BE1A89-2E9E-4A5F-9BF3-A90115823256}" ShortID="725638999">
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>9</Value>
+								<Value>2</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -798,6 +775,13 @@
 					<ObjectLists/>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Hey-Shouting" ID="{F6D28ACE-6311-4A86-820A-4822E8DC5EE8}" ShortID="713192815">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B39C462A-7551-4FE4-B07E-44BE59668433}"/>
@@ -973,6 +957,11 @@
 				<RandomSequenceContainer Name="Turtle-Walk" ID="{68873287-7D5C-4F2B-A36E-608A045EE886}" ShortID="432847602">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">

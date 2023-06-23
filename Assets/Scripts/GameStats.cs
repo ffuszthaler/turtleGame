@@ -36,7 +36,7 @@ public class GameStats : MonoBehaviour
         if (turtleScore == 0 && AIBirdMovement.turtles.Length == 0)
         {
             SceneManager.LoadSceneAsync("GameOver");
-        } 
+        }
     }
 
     // Start is called before the first frame update
